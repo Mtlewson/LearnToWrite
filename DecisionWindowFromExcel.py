@@ -3,6 +3,12 @@
 #Project: Motion Tracking
 #Year: 2019 Academic Year
 
+#Engineers: Michael Lewson
+#School: Chapman University
+#Project: Motion Tracking
+#Year: 2021 Academic Year
+
+
 import numpy as np
 import cv2
 import math
@@ -10,13 +16,11 @@ import paho.mqtt.client as mqtt
 from PIL import Image, ImageDraw
 import pandas as pd
 ############################################################ Global Variables ###############################################
-filename = 'bw_imageTinyExcelNoNumbers.xls'#'bw_imageTinyExcel.xls'#'bw_imageTinyModifiedExcel.xls'
+filename = 'bw_imageTinyExcelNoNumbers.xls' #grabs the decision windows from excel file
 raw_image = cv2.imread('ImageFromExcel.png', 1) #the image version of the same file
 
-df = pd.read_excel(filename, index_col=0)
-#df.fillna(0.5)
-
-letter = df.to_numpy()
+df = pd.read_excel(filename, index_col=0) #grabs excel file converts to data file
+letter = df.to_numpy() #converts to numpy
 #df.replace(np.nan,0)
 #print(type(array))
 #okay so 0 is the top but plus 1
@@ -25,7 +29,7 @@ letter = df.to_numpy()
 #letter[y][x]
 #x 0 is B
 #x -1 is the furthest x point point
-print(letter[0][0])
+#print(letter[0][0])
 
 
 white = [255,255,255]
@@ -144,7 +148,7 @@ def init():
     colorDwin(raw_image)
 
     letter_image = Image.fromarray(raw_image)
-    letter_image.show()
+    letter_image.show() #shows the decision windows on the original image
 
 
     #test = np.array(letter, dtype=np.uint8)
@@ -203,6 +207,10 @@ def init():
 
 ############################################################# Main ########################################################
 init()
+
+
+
+
 #width = 800
 #pixels2 = [(0,0,0)]*600
 #blankImage = Image.new('RGB', (800, 600), color = (255, 255, 255))

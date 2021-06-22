@@ -7,10 +7,8 @@
 #School: Chapman University
 #Year: 2021
 
-#Converts .png image into excel file
+#Converts .png image into excel file with outline of image 
 #filename is for the name of the picture
-#fillEmptyWithZeros determines whether the white space will be 0s.  True for putting 0s, false for blank
-#maxSize determines the size of the excel image with 256 being max
 
 import numpy as np
 import cv2
