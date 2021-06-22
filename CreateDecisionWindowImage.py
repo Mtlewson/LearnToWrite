@@ -3,7 +3,7 @@
 #Project: Motion Tracking
 #Year: 2019 Academic Year
 
-#creates decision window image of original 
+#creates decision window image of original
 
 import numpy as np
 import cv2
