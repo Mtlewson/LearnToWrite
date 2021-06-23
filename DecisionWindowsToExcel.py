@@ -3,13 +3,11 @@
 #Project: Motion Tracking
 #Year: 2019 Academic Year
 
-#creates decision window image of original
-
 import numpy as np
 import cv2
 import math
 import paho.mqtt.client as mqtt
-from PIL import Image, ImageDraw
+
 ############################################################ Global Variables ###############################################
 white = [255,255,255]
 black = [0,0,0]
@@ -55,13 +53,10 @@ def colorDwin (img, class_type="Dwin"):
         for x in range(Dwin.xmin, Dwin.xmax):
             for y in range(Dwin.ymin, Dwin.ymax, -1):
                 if np.array_equal(img[y, x], black):
-                    #print ("x=%s y=%s"%(x, y))
+                    print ("x=%s y=%s"%(x, y))
                     img[y, x] = white
                 else:
                      img[y, x] = 0
-        #letter_image = Image.fromarray(letter)
-        #letter_image.show()
-
 
 def init ():
     #rectangles for the image
@@ -109,36 +104,108 @@ def init ():
     dWinList.append(Dwin(35, 435, 405, 430, 450))
     dWinList.append(Dwin(36, 0, 0, 0, 0)) #dummy window for dWin +1 loop when dWin loop is on dwin=35
 
+
+def totalDistance(x0, y0, x1, y1):
+    return math.sqrt((x0 - x1)**2 + (y0 - y1)**2)
+
+def start (img, inputX, inputY):
+
+    for x in range(dWinList[0].xmin, dWinList[0].xmax):
+        for y in range(dWinList[0].ymin, dWinList[0].ymax, -1):
+            if np.array_equal(img[y, x], black):
+                pixDistStart = int(totalDistance(x, y, inputX, inputY))
+                if pixDistStart <= 5:
+                    return True
+    return False
+
+def getdirection(inputX, inputY, x, y):
+    yDistance = y - inputY
+    xDistance = x - inputX
+    if abs(yDistance) >= abs(xDistance):
+        if y >inputY: return 3
+        else: return 1
+    else:
+        if x > inputX: return 4
+        else: return 2
+
+
+def getMinDistance (img, dWinNum, inputX, inputY, score):
+    FirstKey = 0 #used as flags for distance to not update min distince if no new values
+    SecondKey = 0 #used as flags for distance to not update min distince if no new values
+    direction = 0
+    #print("DwinNum = %s"%(dWinNum))  #used for debugging
+    if dWinNum == 36: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
+        return 36, 0, True
+    else:
+        for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
+            for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
+                if np.array_equal(img[y, x], black):
+                    yDistance = y - inputY
+                    xDistance = x - inputX
+                     #numpy.allclose(a, b, rtol=0, atol=3, equal_nan=False)
+                    if yDistance <= 2 and xDistance <= 2: # a two pixel tolerance is added to the first window as a handicap for the user
+                        score = score +1
+                        pixDistFirst.clear()
+                        pixDistSecond.clear()
+                        pixDirFirst.clear()
+                        pixDirSecond.clear()
+                        return dWinNum, 0, False, score, direction
+                    else:
+                        FirstKey += 1 #Counts up as the loop goes on so every value has a unquie key in the dict
+                        totalDisOne = int(totalDistance(x, y, inputX, inputY)) #the distance of the user input from the black pixel is calculated
+                        pixDistFirst.insert(FirstKey, totalDisOne) #the distance is stored in a dict with the "FirstKey" acting as the key
+                        pixDirFirst[totalDisOne] =  getdirection(inputX, inputY, x, y) #A direction is stored with using the distance as its location in a list
+
+
+        for x in range(dWinList[dWinNum+1].xmin, dWinList[dWinNum+1].xmax):
+            for y in range(dWinList[dWinNum+1].ymin, dWinList[dWinNum+1].ymax, -1):
+                if  np.array_equal(img[y, x],black):
+                    if np.array_equal(img[y,x], [inputY, inputX]): #if the input is on a letter pixel add one to score and return
+                        score = score +1
+                        pixDistFirst.clear()
+                        pixDistSecond.clear()
+                        pixDirFirst.clear()
+                        pixDirSecond.clear()
+                        return dWinNum+1, 0, False, score, direction
+                    else:
+                        SecondKey += 1 #Counts up as the loop goes on so every value has a unquie key in the dict
+                        totalDisTwo = int(totalDistance(x, y, inputX, inputY))
+                        pixDistSecond.insert(SecondKey, totalDisTwo)
+                        pixDirSecond[totalDisTwo] =  getdirection(inputX, inputY, x, y)
+
+        if FirstKey != 0:
+            minPixDist.update({dWinNum: min(pixDistFirst)}) #the minimum distance from the first Dwin is taken
+        else: minPixDist[dWinNum] = 1000 #used to asign a value to minPixDist if none was found
+        if SecondKey != 0:
+            minPixDist.update({dWinNum+1: min(pixDistSecond)})  #the minimum distance from the second Dwin is taken
+        else: minPixDist[dWinNum+1] = 1000  #used to asign a value to minPixDist if none was found
+        if (minPixDist[dWinNum+1] + 1) < minPixDist[dWinNum]: #compares the two min distances
+            direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
+            #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
+            pixDistFirst.clear()
+            pixDistSecond.clear()
+            pixDirFirst.clear()
+            pixDirSecond.clear()
+            return dWinNum+1, minPixDist[dWinNum+1], False, score, direction
+            #returns the new dWinNum, min distance, flag signaling the game is to continue, the current score, and direction
+        #end the gmae here elif dwin 36 ... need to make it go to dwin 36 no current logic for a 36th decision window
+# =============================================================================
+#         else:
+#             return dWinNum, 0, True, score, direction
+# =============================================================================
+        else:
+            direction = pixDirFirst[minPixDist[dWinNum]]
+            #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum, minPixDist[dWinNum], direction)) #used for debugging
+            pixDistFirst.clear()
+            pixDistSecond.clear()
+            pixDirFirst.clear()
+            pixDirSecond.clear()
+            return dWinNum, minPixDist[dWinNum], False, score, direction
+
+
 ############################################################# Main ########################################################
 init()
-#width = 800
-#pixels2 = [(0,0,0)]*600
-#blankImage = Image.new('RGB', (800, 600), color = (255, 255, 255))
-#img.save("test1.png")
-#ImageArray = cv2.imread("test1.png", 1)
-
-# Using above first method to create a
-# 2D array
-# Using above second method to create a
-# 2D array
-#y, x
-# rows, cols = (600, 800)
-# arr=[]
-# for i in range(rows):
-#     col = []
-#     for j in range(cols):
-#         col.append((255,255,255))
-#     arr.append(col)
-# #arr[3][3] = (0,0,0)
-# array = np.array(arr, dtype=np.uint8)
-# #print(arr)
-# new_image = Image.fromarray(array)
-# new_image.save('DWTest1.png')
-
-
-colorDwin(letter, dWinList) #used to color in the dWin black for debugging
-letter_image = Image.fromarray(letter)
-letter_image.save('VisibleDecisionWindows.png')
+#colorDwin(letter, dWinList) #used to color in the dWin black for debugging
 # broker = "192.168.43.175"
 # client = mqtt.Client("computer2")
 # client.connect(broker)
@@ -204,7 +271,7 @@ letter_image.save('VisibleDecisionWindows.png')
 #
 # camera.release()
 # cv2.destroyAllWindows()
-
+#
 
 ###################################################################### ARCHIVE ###################################################################
 #Below is a failed attempt at automating the creation of Decision Windows

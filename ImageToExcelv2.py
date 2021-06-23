@@ -15,6 +15,7 @@
 import numpy as np
 import cv2
 import xlwt
+import pandas
 
 filename = 'bw_image.png'
 letter = cv2.imread(filename, 1)
@@ -134,7 +135,19 @@ def excelOutput(excelFilename, sheet, class_type = "PixelLocation"):
     book.save(fileOutput)
     print("Image written to", fileOutput)
 
-letter = resizeImage(letter)
+#letter = resizeImage(letter)
 initLetter(letter, pixLoc)
 
-excelOutput(filename, '1', pixLoc)
+#writer = pd.ExcelWriter('output.xlsx',engine='xlsxwriter')
+#file.to_excel(writer,'output_sheet')
+#writer.save()
+#df1 = pd.DataFrame(letter)
+
+#df1.to_excel("output.xlsx")
+#excelOutput(filename, '1', pixLoc)
+
+#writer = pandas.ExcelWriter('..\output\The file.xlsx',engine='xlsxwriter')
+
+#file.to_excel(writer,'output_sheet')
+
+#writer.save()
