@@ -20,7 +20,7 @@ import pandas as pd
 #raw_image = cv2.imread('ImageFromExcel.png', 1) #the image version of the same file
 #'letter_images/Letter_O.png'
 #excelFilePath = 'letter_images/Letter_L_Excel.xls' #grabs the decision windows from excel file
-excelFilePath = 'letter_images/Letter_L_Test_Excel.xls' #grabs the decision windows from excel file
+excelFilePath = 'letter_images/Letter_H_Excel.xls' #grabs the decision windows from excel file
 
 #raw_image = cv2.imread('letter_images/Letter_L_Image.png', 1) #the image version of the same file
 

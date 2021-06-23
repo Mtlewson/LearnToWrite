@@ -7,14 +7,14 @@
 #School: Chapman University
 #Year: 2021
 
-#Converts .png image into excel file with outline of image 
+#Converts .png image into excel file with outline of image
 #filename is for the name of the picture
 
 import numpy as np
 import cv2
 import xlwt
 
-filename = 'bw_imageTiny.png'
+filename = 'Letter_O.png'
 letter = cv2.imread(filename, 1)
 #controls whether the excel file will have 0s
 fillEmptyWithZeros = False
@@ -127,7 +127,7 @@ def excelOutput(excelFilename, sheet, class_type = "PixelLocation"):
 
     #creates name for excel file
     fileOutput = excelFilename.replace(".png", "").replace(".jpeg", "")
-    fileOutput = fileOutput + "NoNumbersExcel.xls"
+    fileOutput = fileOutput + "_Excel.xls"
 
     book.save(fileOutput)
     print("Image written to", fileOutput)

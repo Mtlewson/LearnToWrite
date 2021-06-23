@@ -14,7 +14,7 @@ import numpy as np
 import cv2
 import xlwt
 
-filename = 'Letter_L_Test.png'
+filename = 'Letter_H.png'
 letter = cv2.imread(filename, 1)
 #controls whether the excel file will have 0s
 fillEmptyWithZeros = False
