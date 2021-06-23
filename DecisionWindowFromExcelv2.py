@@ -19,8 +19,10 @@ import pandas as pd
 #filename = 'bw_imageTinyExcelNoNumbers.xls' #grabs the decision windows from excel file
 #raw_image = cv2.imread('ImageFromExcel.png', 1) #the image version of the same file
 #'letter_images/Letter_O.png'
-excelFilePath = 'letter_images/Letter_L_Excel.xls' #grabs the decision windows from excel file
-raw_image = cv2.imread('letter_images/Letter_L_Image.png', 1) #the image version of the same file
+#excelFilePath = 'letter_images/Letter_L_Excel.xls' #grabs the decision windows from excel file
+excelFilePath = 'letter_images/Letter_L_Test_Excel.xls' #grabs the decision windows from excel file
+
+#raw_image = cv2.imread('letter_images/Letter_L_Image.png', 1) #the image version of the same file
 
 
 df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
@@ -87,6 +89,44 @@ def colorDwin (img, class_type="Dwin"):
                 else:
                      img[y, x] = 0
 
+def extractImageFromExcel(letter):
+    #grabs a numpy array of excel
+    #letter_array = np.array(letter, dtype=np.uint8)
+    letter_array = letter
+    height = letter_array.shape[0]
+    width = letter_array.shape[1]
+    #print(width,height)
+    #print(math.isnan(letter_array[0][0]))
+
+    #creates a new array for the image (because can't change the type of numpy array to be proper pixels)
+    rows, cols = (height, width)
+    image_arr=[]
+    for i in range(rows):
+        col = []
+        for j in range(cols):
+            col.append((255,255,255))
+        image_arr.append(col)
+
+    for yRow in range(0, height):
+      for xColumn in range(0, width):
+          #not (math.isnan (letter[yRow][xColumn]))
+          #if letter_array[yRow][xColumn] != 0:
+              #print(yRow, xColumn)
+            #  print(letter_array[yRow][xColumn])
+          if (not math.isnan (letter_array[yRow][xColumn])) and (letter_array[yRow][xColumn] == 0): #black pixels
+              image_arr[yRow][xColumn] = (0, 0, 0)
+
+          #else:
+            #  image_arr[yRow][xColumn] = (0, 0, 0)
+
+    image_array_numpy = np.array(image_arr, dtype=np.uint8)
+    new_image_temp = Image.fromarray(image_array_numpy)
+    #new_image_temp.show()
+    #new_image = Image.fromarray(image_array_numpy)
+    return image_array_numpy
+
+
+
 def extractDecisionWindowsFromExcel():
     dwDict = {}
 
@@ -138,9 +178,9 @@ def extractDecisionWindowsFromExcel():
             dWinList.append(Dwin(key, yMin, yMax, xMin, xMax))
 
 
-        else:
-            print("Please ensure there are 2 points per decision window")
-            print(dwDict[key])
+        #else:
+        #    print("Please ensure there are 2 points per decision window")
+            #print(dwDict[key])
         dWinList.sort(key=lambda x: x.idnum, reverse=False)
         #ut.sort(key=lambda x: x.count, reverse=True)
 
@@ -150,11 +190,12 @@ def init():
     #find the coord of each number then make the decision window from there
     height = letter.shape[0]
     width = letter.shape[1]
+    letter_image = extractImageFromExcel(letter)
     extractDecisionWindowsFromExcel()
 
-    colorDwin(raw_image)
+    colorDwin(letter_image)
 
-    letter_image = Image.fromarray(raw_image)
+    letter_image = Image.fromarray(letter_image)
     letter_image.show() #shows the decision windows on the original image
 
 
