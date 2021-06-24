@@ -7,19 +7,18 @@
 #School: Chapman University
 #Year: 2021
 
-#Converts .png image into excel file
+#Converts .png image into excel file with outline of image
 #filename is for the name of the picture
-#fillEmptyWithZeros determines whether the white space will be 0s.  True for putting 0s, false for blank
-#maxSize determines the size of the excel image with 256 being max
+
 
 import numpy as np
 import cv2
 import xlwt
 
-filename = 'bw_image.png'
+#image name
+filename = 'Letter_H.png'
 letter = cv2.imread(filename, 1)
-#controls whether the excel file will have 0s
-fillEmptyWithZeros = True
+
 
 maxSize = 256 #adjusts image size for the excel output.  CANNOT EXCEED 256!
 
@@ -110,26 +109,34 @@ def excelOutput(excelFilename, sheet, class_type = "PixelLocation"):
     height = letter.shape[0]
     width = letter.shape[1]
 
-    #populates 0s
-    if (fillEmptyWithZeros):
-        for x in range(0, width):
-            for y in range(height, 0, -1):
-                sh.write(y, x, 0)
 
-    #populates and shades areas with 1s
+    xlwt.add_palette_colour("border_color", 0x21)
+    book.set_colour_RGB(0x21, 192, 178, 255)
+    borderStyle = xlwt.easyxf('pattern: pattern solid, fore_colour border_color')
+    #width border
+    sh._cell_overwrite_ok = True
+    for x in range(0,width):
+        sh.write(0, x, "", borderStyle)
+        sh.write(height-1, x, "", borderStyle)
+    for y in range(0, height):
+        sh.write(y, 0, "", borderStyle)
+        sh.write(y, width-1, "", borderStyle)
+    #sides
+    #populates and shades the image with 0
+    sh._cell_overwrite_ok = False
     xlwt.add_palette_colour("custom_colour", 0x21)
-    book.set_colour_RGB(0x21, 251, 228, 228)
+    #book.set_colour_RGB(0x21, 251, 228, 228)
     style = xlwt.easyxf('pattern: pattern solid, fore_colour custom_colour')
 
     sh._cell_overwrite_ok = True #allows values on excel doc to be overwritten
     for pixelLocation in pixLoc:
-        sh.write(pixelLocation.yLoc, pixelLocation.xLoc, 1, style) #populates 1 for where there is writing
+        sh.write(pixelLocation.yLoc, pixelLocation.xLoc, 0, style) #populates 1 for where there is writing
     sh._cell_overwrite_ok = False
 
 
     #creates name for excel file
     fileOutput = excelFilename.replace(".png", "").replace(".jpeg", "")
-    fileOutput = fileOutput + "Excel.xls"
+    fileOutput = fileOutput + "_Excel.xls"
 
     book.save(fileOutput)
     print("Image written to", fileOutput)
