@@ -180,7 +180,7 @@ def init():
     extractDecisionWindowsFromExcel()
     #colors the decision windows over the image
     colorDwin(letter_image)
-    #shows the image 
+    #shows the image
     letter_image = Image.fromarray(letter_image)
     letter_image.show() #shows the decision windows on the original image
 

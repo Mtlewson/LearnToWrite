@@ -1,0 +1,221 @@
+2021-07-17 08:26:35,970 - INFO - root - 
+
+
+2021-07-17 08:26:35,970 - INFO - root - PROGRAM BEGINS
+2021-07-17 08:26:35,970 - DEBUG - asyncio - Using selector: SelectSelector
+2021-07-17 08:26:36,574 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:36,574 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:36,585 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:26:36,589 - DEBUG - bleak.backends.dotnet.discovery - Received 74:99:AF:85:EB:18: Unknown.
+2021-07-17 08:26:37,086 - DEBUG - bleak.backends.dotnet.discovery - Received 58:03:E9:56:8B:F3: Unknown.
+2021-07-17 08:26:37,087 - DEBUG - bleak.backends.dotnet.discovery - Received 58:03:E9:56:8B:F3: Unknown.
+2021-07-17 08:26:37,995 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:37,996 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:26:38,524 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:26:38,532 - DEBUG - bleak.backends.dotnet.discovery - Received 74:99:AF:85:EB:18: Unknown.
+2021-07-17 08:26:38,532 - DEBUG - bleak.backends.dotnet.discovery - Received 74:99:AF:85:EB:18: Unknown.
+2021-07-17 08:26:39,019 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:39,020 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:39,025 - DEBUG - bleak.backends.dotnet.discovery - Received 56:5D:25:CA:3E:9C: Unknown.
+2021-07-17 08:26:39,026 - DEBUG - bleak.backends.dotnet.discovery - Received 56:5D:25:CA:3E:9C: Unknown.
+2021-07-17 08:26:39,524 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:26:40,005 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:40,005 - DEBUG - bleak.backends.dotnet.discovery - 5 devices found. Watcher status: 3.
+2021-07-17 08:26:40,038 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:26:41,034 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:41,035 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:41,521 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:41,521 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:41,526 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:26:41,532 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:26:41,532 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:26:42,008 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:42,009 - DEBUG - bleak.backends.dotnet.discovery - 5 devices found. Watcher status: 3.
+2021-07-17 08:26:42,030 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:42,030 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:42,531 - DEBUG - bleak.backends.dotnet.discovery - Received 72:7C:DA:FF:D2:1F: Unknown.
+2021-07-17 08:26:43,026 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:43,027 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:43,030 - DEBUG - bleak.backends.dotnet.discovery - Received 25:FE:2F:47:C0:45: Unknown.
+2021-07-17 08:26:43,033 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:43,034 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:43,039 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:26:43,041 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:26:44,011 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:44,011 - DEBUG - bleak.backends.dotnet.discovery - 6 devices found. Watcher status: 3.
+2021-07-17 08:26:44,041 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:44,041 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:45,030 - DEBUG - bleak.backends.dotnet.discovery - Received F8:04:2E:E7:0F:DB: Unknown.
+2021-07-17 08:26:45,033 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:26:45,036 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:45,037 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:45,528 - DEBUG - bleak.backends.dotnet.discovery - Received 67:B8:81:3A:1A:43: Unknown.
+2021-07-17 08:26:45,537 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-07-17 08:26:45,540 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: [TV] Samsung Q70 Series (65).
+2021-07-17 08:26:46,015 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:46,015 - DEBUG - bleak.backends.dotnet.discovery - 6 devices found. Watcher status: 3.
+2021-07-17 08:26:46,030 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:46,031 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:46,535 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:46,535 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:46,542 - DEBUG - bleak.backends.dotnet.discovery - Received F8:04:2E:E7:0F:DB: Unknown.
+2021-07-17 08:26:47,036 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:26:47,042 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:47,043 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:26:47,531 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:47,532 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:47,536 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:26:48,018 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:48,018 - DEBUG - bleak.backends.dotnet.discovery - 7 devices found. Watcher status: 3.
+2021-07-17 08:26:48,547 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:48,547 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:49,038 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:26:49,040 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:26:49,542 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:49,543 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:26:49,546 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:26:49,547 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:26:50,024 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:50,024 - DEBUG - bleak.backends.dotnet.discovery - 5 devices found. Watcher status: 3.
+2021-07-17 08:26:50,050 - DEBUG - bleak.backends.dotnet.discovery - Received 74:99:AF:85:EB:18: Unknown.
+2021-07-17 08:26:50,051 - DEBUG - bleak.backends.dotnet.discovery - Received 74:99:AF:85:EB:18: Unknown.
+2021-07-17 08:26:50,540 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:50,540 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:50,549 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:26:50,552 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:50,552 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:26:51,048 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:26:51,055 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:26:52,030 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:52,030 - DEBUG - bleak.backends.dotnet.discovery - 6 devices found. Watcher status: 3.
+2021-07-17 08:26:52,550 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:26:52,558 - DEBUG - bleak.backends.dotnet.discovery - Received 0D:7D:D5:60:31:71: Unknown.
+2021-07-17 08:26:52,562 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:52,563 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:53,058 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:26:54,036 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:54,036 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:26:54,565 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:54,565 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:26:55,064 - DEBUG - bleak.backends.dotnet.discovery - Received 56:5D:25:CA:3E:9C: Unknown.
+2021-07-17 08:26:55,064 - DEBUG - bleak.backends.dotnet.discovery - Received 56:5D:25:CA:3E:9C: Unknown.
+2021-07-17 08:26:55,069 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:26:55,560 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:55,561 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:26:56,041 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:56,042 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:26:58,050 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:26:58,050 - DEBUG - bleak.backends.dotnet.discovery - 0 devices found. Watcher status: 3.
+2021-07-17 08:26:58,568 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:26:59,070 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:26:59,071 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:00,055 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:00,055 - DEBUG - bleak.backends.dotnet.discovery - 2 devices found. Watcher status: 3.
+2021-07-17 08:27:00,069 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:00,070 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:00,578 - DEBUG - bleak.backends.dotnet.discovery - Received 72:7C:DA:FF:D2:1F: Unknown.
+2021-07-17 08:27:00,583 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:27:01,074 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:01,074 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:02,062 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:02,063 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:27:02,084 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:27:02,085 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:27:03,579 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:27:03,580 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:27:03,582 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:03,583 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:03,589 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:27:04,068 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:04,069 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:27:04,093 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:04,094 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:04,096 - DEBUG - bleak.backends.dotnet.discovery - Received 1F:CF:00:D5:C7:97: Unknown.
+2021-07-17 08:27:04,585 - DEBUG - bleak.backends.dotnet.discovery - Received F8:04:2E:E7:0F:DB: Unknown.
+2021-07-17 08:27:04,591 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:27:05,092 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-07-17 08:27:05,092 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-07-17 08:27:05,584 - DEBUG - bleak.backends.dotnet.discovery - Received 1F:CF:00:D5:C7:97: Unknown.
+2021-07-17 08:27:05,589 - DEBUG - bleak.backends.dotnet.discovery - Received 5E:F4:F1:7E:42:0D: Unknown.
+2021-07-17 08:27:05,592 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-07-17 08:27:05,593 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-07-17 08:27:05,596 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:05,597 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:06,073 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:06,074 - DEBUG - bleak.backends.dotnet.discovery - 7 devices found. Watcher status: 3.
+2021-07-17 08:27:06,074 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-07-17 08:27:06,147 - DEBUG - bleak.backends.dotnet.client - Get Services...
+2021-07-17 08:27:06,254 - DEBUG - bleak.backends.dotnet.client - Connection successful.
+2021-07-17 08:27:08,472 - DEBUG - root - User: ML
+2021-07-17 08:27:10,877 - DEBUG - root - Accuracy test started
+2021-07-17 08:27:23,945 - DEBUG - bleak.backends.dotnet.client - Disconnecting from BLE device...
+2021-07-17 08:27:23,967 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:23,968 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:24,466 - DEBUG - bleak.backends.dotnet.discovery - Received F8:04:2E:E7:0F:DB: Unknown.
+2021-07-17 08:27:24,472 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-07-17 08:27:24,481 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:27:24,968 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:27:25,465 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:27:25,480 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-07-17 08:27:25,482 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:27:25,954 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:25,955 - DEBUG - bleak.backends.dotnet.discovery - 7 devices found. Watcher status: 3.
+2021-07-17 08:27:25,982 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:25,982 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:26,985 - DEBUG - bleak.backends.dotnet.discovery - Received 1F:CF:00:D5:C7:97: Unknown.
+2021-07-17 08:27:27,485 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:27:27,959 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:27,959 - DEBUG - bleak.backends.dotnet.discovery - 3 devices found. Watcher status: 3.
+2021-07-17 08:27:28,476 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:27:28,479 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: [TV] Samsung 8 Series (65).
+2021-07-17 08:27:28,481 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:28,481 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:28,488 - DEBUG - bleak.backends.dotnet.discovery - Received 1F:CF:00:D5:C7:97: Unknown.
+2021-07-17 08:27:28,981 - DEBUG - bleak.backends.dotnet.discovery - Received 25:FE:2F:47:C0:45: Unknown.
+2021-07-17 08:27:28,989 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:27:28,990 - DEBUG - bleak.backends.dotnet.discovery - Received 4E:53:11:85:6E:DC: Unknown.
+2021-07-17 08:27:29,477 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:29,478 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:29,964 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:29,965 - DEBUG - bleak.backends.dotnet.discovery - 6 devices found. Watcher status: 3.
+2021-07-17 08:27:29,997 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:FC:35:7B:50:7C: Unknown.
+2021-07-17 08:27:30,492 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:30,493 - DEBUG - bleak.backends.dotnet.discovery - Received 68:50:F0:9F:56:61: Unknown.
+2021-07-17 08:27:30,991 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:27:31,485 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:31,486 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:31,969 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:31,969 - DEBUG - bleak.backends.dotnet.discovery - 4 devices found. Watcher status: 3.
+2021-07-17 08:27:32,496 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:27:32,503 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:32,986 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:27:32,989 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:27:32,991 - DEBUG - bleak.backends.dotnet.discovery - Received FA:B4:6A:30:5B:CF: Unknown.
+2021-07-17 08:27:32,994 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:27:32,995 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:27:32,998 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-07-17 08:27:33,001 - DEBUG - bleak.backends.dotnet.discovery - Received 38:68:A4:0D:FE:EB: [TV] Samsung Q70 Series (65).
+2021-07-17 08:27:33,498 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:33,499 - DEBUG - bleak.backends.dotnet.discovery - Received CC:D2:81:7A:31:C7: Unknown.
+2021-07-17 08:27:33,976 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:33,977 - DEBUG - bleak.backends.dotnet.discovery - 7 devices found. Watcher status: 3.
+2021-07-17 08:27:33,997 - DEBUG - bleak.backends.dotnet.discovery - Received 7E:E5:F2:12:A5:E1: Unknown.
+2021-07-17 08:27:33,998 - DEBUG - bleak.backends.dotnet.discovery - Received 7E:E5:F2:12:A5:E1: Unknown.
+2021-07-17 08:27:34,498 - DEBUG - bleak.backends.dotnet.discovery - Received F8:04:2E:E7:0F:DB: Unknown.
+2021-07-17 08:27:34,609 - DEBUG - bleak.backends.dotnet.discovery - Received 64:1C:AE:0D:93:E4: Unknown.
+2021-07-17 08:27:34,993 - DEBUG - bleak.backends.dotnet.discovery - Received 1F:CF:00:D5:C7:97: Unknown.
+2021-07-17 08:27:34,995 - DEBUG - bleak.backends.dotnet.discovery - Received 38:5B:C9:29:6C:44: Unknown.
+2021-07-17 08:27:34,997 - DEBUG - bleak.backends.dotnet.discovery - Received 04:09:CD:C4:77:EF: Unknown.
+2021-07-17 08:27:35,005 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:35,006 - DEBUG - bleak.backends.dotnet.discovery - Received 76:BC:C1:34:A6:F1: Unknown.
+2021-07-17 08:27:35,009 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:27:35,010 - DEBUG - bleak.backends.dotnet.discovery - Received AC:BC:32:73:49:B3: Unknown.
+2021-07-17 08:27:35,497 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-07-17 08:27:35,497 - DEBUG - bleak.backends.dotnet.discovery - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-07-17 08:27:35,502 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:35,503 - DEBUG - bleak.backends.dotnet.discovery - Received 5B:F4:EF:0B:E6:BF: Unknown.
+2021-07-17 08:27:35,982 - DEBUG - bleak.backends.dotnet.discovery - Could not remove event handlers: unknown event handler...
+2021-07-17 08:27:35,983 - DEBUG - bleak.backends.dotnet.discovery - 10 devices found. Watcher status: 3.
+2021-07-17 08:27:35,984 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-07-17 08:27:36,040 - DEBUG - bleak.backends.dotnet.client - Get Services...
+2021-07-17 08:27:36,146 - DEBUG - bleak.backends.dotnet.client - Connection successful.
