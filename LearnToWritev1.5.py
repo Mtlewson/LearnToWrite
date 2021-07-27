@@ -284,13 +284,23 @@ async def main(address, loop):
                                 print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
                                 msg = ("{0},{1}".format(direction, pixDistance))
                                 print(msg)
+                                print(pixDistance)
 
                                 #user_command = b"1," + b"2,"
                                 # user_command = b"1,2"
                                 # intensity = b'2'
                                 #print(bytearray(b"3,1"))
                                 user_command = b"1,2"
-                                intensity =  b'2'
+                                if pixDistance < 50:
+                                    intensity =  b'0'
+                                elif pixDistance < 100:
+                                    intensity = b'1'
+                                elif pixDistance < 200:
+                                    intensity = b'2'
+                                elif pixDistance < 500:
+                                    intensity = b'3'
+                                else:
+                                    intensity =  b'0'
 
                                 print("going to transmit here!")
                                 #thing = ("{0},{1}".format(direction, 2))
@@ -309,6 +319,9 @@ async def main(address, loop):
                                 #command_list = [b"1,2", b"2,2", b"3,2", b"4,2"]
                                 print(bytearray(user_command[0:20]))
                                 await client.write_gatt_char(UUID_NORDIC_TX, bytearray(user_command[0:20]), True)
+
+                                ##send distance to arduino here!
+                                #client.publish("motors",msg)
                                 print("transmitted")
 
 
