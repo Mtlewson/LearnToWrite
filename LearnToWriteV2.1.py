@@ -24,7 +24,7 @@ from bleak import BleakClient
 ############################################################ Global Variables ###############################################
 
 #excelFilePath = 'letter_images/Letter_L_Excelv2.xls' #grabs the decision windows from excel file
-excelFilePath = 'test02.xlsx' #grabs the decision windows from excel file
+excelFilePath = 'letter_images/Letter_L_Excel.xlsx' #grabs the decision windows from excel file
 
 df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
 letter = df.to_numpy() #converts to numpy
@@ -91,6 +91,7 @@ def colorDwin (img, class_type="Dwin"):
                 else:
                      img[y, x] = 0
 
+#function to show decision windows, avoid using with rest of program active
 def showDwin():
     letter_image = extractImageFromExcel(letter)
     #extracts decision windows
@@ -99,7 +100,7 @@ def showDwin():
     colorDwin(letter_image)
     #shows the image
     letter_image = Image.fromarray(letter_image)
-    letter_image.save("temp.png")
+    letter_image.show()
 
 def totalDistance(x0, y0, x1, y1):
     return math.sqrt((x0 - x1)**2 + (y0 - y1)**2)
@@ -470,7 +471,9 @@ async def main(address, loop, letter_input):
             continue
 
 ############################################################# Main ########################################################
+#extracts decision windows from excel
 init()
+#gets letter from excel
 letter = extractImageFromExcel(letter)
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main(address, loop, letter))
