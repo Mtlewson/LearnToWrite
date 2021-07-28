@@ -8,7 +8,8 @@
 #Project: Motion Tracking
 #Year: 2021 Academic Year
 
-
+from os import listdir
+from os.path import isfile, join
 import numpy as np
 import cv2
 import math
@@ -239,6 +240,37 @@ def extractImageFromExcel(letter):
 
     return image_array_numpy
 
+def readDirectoriesForFiles():
+    mypath = "letter_images"
+    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    option_list = []
+    file_dict = {}
+
+
+    for i in range (0, len(onlyfiles)):
+        file_dict[str(i)]=onlyfiles[i]
+        filename = onlyfiles[i].replace("_Excel", "").replace(".xlsx", "").replace(".xls","").replace("_", " ")
+        #filename.replace(".png", "").replace(".jpeg", "")
+        print("option:", i, filename)
+        #option_list.append(str(i))
+
+    valid_input = False
+    filename = ""
+    while valid_input == False:
+        user_input = input("Please enter number of file to select\n")
+        if user_input in file_dict.keys():
+            valid_input = True
+            print(file_dict[user_input], "selected!")
+            excelFilePath = 'letter_images/' + file_dict[user_input]
+            df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
+            letter = df.to_numpy()
+            return letter
+        elif user_input.lower() == "quit":
+            print("quitting")
+            return letter
+            break
+        else:
+            print("invalid input, please enter 0, 1, 2 etc, or quit ")
 
 
 #function to grab the decision windows from excel
@@ -383,8 +415,8 @@ async def main(address, loop, letter_input):
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                                 print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
-                                msg = ("{0},{1}".format(direction, pixDistance))
-                                print(msg)
+                                # msg = ("{0},{1}".format(direction, pixDistance))
+                                # print(msg)
 
                                 #user_command = b"1," + b"2,"
                                 # user_command = b"1,2"
@@ -404,7 +436,7 @@ async def main(address, loop, letter_input):
                                 else:
                                     intensity =  b'0'
 
-                                print("going to transmit here!")
+                                # print("going to transmit here!")
                                 #thing = ("{0},{1}".format(direction, 2))
                                 if direction == 1: #forward
                                     user_command = b"1," + intensity
@@ -419,9 +451,9 @@ async def main(address, loop, letter_input):
 
 
                                 #command_list = [b"1,2", b"2,2", b"3,2", b"4,2"]
-                                print(bytearray(user_command[0:20]))
+                                # print(bytearray(user_command[0:20]))
                                 await client.write_gatt_char(UUID_NORDIC_TX, bytearray(user_command[0:20]), True)
-                                print("transmitted")
+                                # print("transmitted")
 
 
 
@@ -434,36 +466,7 @@ async def main(address, loop, letter_input):
                         #client.publish("motors",msg)
                         print("Your Score is %s letter pixels hit out of 611 letter pixels"%(score))
                         break
-                    # print("\n\nSelect the test you want to run then ENTER:")
-                    # print("1- Accuracy, 2- Speed")
-                    # print("3- Speed + Accuracy, 4- Intensity")
-                    # print("5- User Training, Any other int- QUIT")
-                    # select_test = int(input())
-                    #
-                    # # Call coroutine function and wait on it to finish
-                    # if select_test == 1:
-                    #     logging.debug("Accuracy test started")
-                    #     await run_test(client, loop, command_list, 13)
-                    #     # 13 loop iterations * 4 motor commands/iteration = 52 responses
-                    # elif select_test == 2:
-                    #     logging.debug("Speed test started")
-                    #     await run_test(client, loop, command_list, 8)
-                    #     # 8 loop iterations * 4 motor commands/iteration = 32 responses
-                    # elif select_test == 3:
-                    #     logging.debug("Speed + Accuracy test started")
-                    #     await run_test(client, loop, command_list, 13)
-                    # elif select_test == 4:
-                    #     logging.debug("Intensity test started")
-                    #     # Testing intensity levels on each motor
-                    #     await run_test(client, loop, command_list_intensity1, 8)
-                    #     await run_test(client, loop, command_list_intensity2, 8)
-                    #     await run_test(client, loop, command_list_intensity3, 8)
-                    #     await run_test(client, loop, command_list_intensity4, 8)
-                    # elif select_test == 5:
-                    #     logging.debug("User training started")
-                    #     await run_training(client)
-                    # else:
-                    #     break
+
                 break
         except Exception as e: # Catch connection exceptions, usually "device not found," then try to reconnect
             print(e)
@@ -472,6 +475,10 @@ async def main(address, loop, letter_input):
 
 ############################################################# Main ########################################################
 #extracts decision windows from excel
+
+
+
+letter = readDirectoriesForFiles()
 init()
 #gets letter from excel
 letter = extractImageFromExcel(letter)

@@ -1,9 +1,13 @@
+#This program is used to take a png or jpeg image file and convert it into an excel file where decision windows can be added for the LearnToWrite program
+
+
+
 import xlsxwriter
 import numpy as np
 import cv2
 
 #image name
-filename = 'bw_image.png'
+filename = 'letter_S.png'
 letter = cv2.imread(filename, 1)
 
 maxSize = 256 #adjusts image size for the excel output.  CANNOT EXCEED 256!
@@ -23,30 +27,30 @@ class PixelLocation(object):
         self.pixB= pixB
 
 #function to resize image to fit into excel
-def resizeImage(img):
-
-  originalHeight = img.shape[0]
-  originalWidth = img.shape[1]
-  reduceRatio = 1
-  #calculates which side is bigger then resizes it
-  if originalHeight > originalWidth:
-      if originalHeight < maxSize: #no need for adjusting size as it is below max
-          return img
-      reduceRatio = float(originalHeight/maxSize)
-  else:
-      if originalWidth < maxSize:
-          return img
-      reduceRatio = float(originalWidth/maxSize)
-
-
-  adjustedWidth = int(originalWidth/reduceRatio)
-  adjustedHeight = int(originalHeight/reduceRatio)
-
-  print("Width is now", adjustedWidth, "Height is now", adjustedHeight)
-  dim = (adjustedWidth, adjustedHeight)
-
-  img = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
-  return img
+# def resizeImage(img):
+#
+#   originalHeight = img.shape[0]
+#   originalWidth = img.shape[1]
+#   reduceRatio = 1
+#   #calculates which side is bigger then resizes it
+#   if originalHeight > originalWidth:
+#       if originalHeight < maxSize: #no need for adjusting size as it is below max
+#           return img
+#       reduceRatio = float(originalHeight/maxSize)
+#   else:
+#       if originalWidth < maxSize:
+#           return img
+#       reduceRatio = float(originalWidth/maxSize)
+#
+#
+#   adjustedWidth = int(originalWidth/reduceRatio)
+#   adjustedHeight = int(originalHeight/reduceRatio)
+#
+#   print("Width is now", adjustedWidth, "Height is now", adjustedHeight)
+#   dim = (adjustedWidth, adjustedHeight)
+#
+#   img = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
+#   return img
 
 
 def changeToBW (img):
@@ -96,7 +100,7 @@ def excelOutput(excelFilename, sheet, class_type = "PixelLocation"):
 
      # Create a workbook and add a worksheet.
     fileOutput = filename.replace(".png", "").replace(".jpeg", "")
-    workbook = xlsxwriter.Workbook(fileOutput + '_excel.xlsx')
+    workbook = xlsxwriter.Workbook(fileOutput + '_Excel.xlsx')
     worksheet = workbook.add_worksheet()
     row = 0
     col = 0

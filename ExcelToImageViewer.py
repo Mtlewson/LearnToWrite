@@ -5,7 +5,7 @@ import math
 from PIL import Image, ImageDraw
 import pandas as pd
 ############################################################ Global Variables ###############################################
-filename = 'test02.xlsx'#'bw_imageTinyModifiedExcel.xls'
+filename = 'letter_images/Letter_S_Excel.xlsx' #bw_imageTinyModifiedExcel.xls'
 #filename = "Letter_L_Excelv2.xls"
 df = pd.read_excel(filename, index_col=0)
 #df.fillna(0.5)
