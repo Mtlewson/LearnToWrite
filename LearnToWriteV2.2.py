@@ -20,8 +20,14 @@ import pandas as pd
 import asyncio
 import random
 #import logging
+
+import logging
+import time
+
 import msvcrt
 from bleak import BleakClient
+
+import copy
 ############################################################ Global Variables ###############################################
 
 #excelFilePath = 'letter_images/Letter_L_Excelv2.xls' #grabs the decision windows from excel file
@@ -66,6 +72,16 @@ startFlag = False
 oldStartFlag = False
 endFlag = False
 score = 0
+
+
+
+# Configure logging parameters
+#log_date = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+log_date = time.strftime("%d-%m-%Y-%H_%M_%S", time.localtime())
+log_name = "LTW2.1_log_" + log_date + ".log"
+logging.basicConfig(filename="log_files/"+log_name, filemode="a", format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+                    level=logging.DEBUG)
+
 
 ############################################################# Class Definitions #################################################
 
@@ -133,9 +149,18 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
     SecondKey = 0 #used as flags for distance to not update min distince if no new values
     direction = 0
     #print("DwinNum = %s"%(dWinNum))  #used for debugging
-    if dWinNum == 36: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
-        return 36, 0, True
+    dWinNumEnd = len(dWinList)
+    # if dWinNum == 36: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
+    #     return 36, 0, True
+    if dWinNum == dWinNumEnd: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
+        return dWinNumEnd, 0, True, 0, 0
     else:
+        #COLORS CURRENT DWIN!
+        #COLOR
+        #COLOR
+
+
+
         for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
             for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
                 if np.array_equal(img[y, x], black):
@@ -351,7 +376,10 @@ async def main(address, loop, letter_input):
     oldStartFlag = False
     endFlag = False
     score = 0
-    letter = letter_input
+    letter = copy.deepcopy(letter_input)
+    prevDwinNumber = 0
+
+    refresh_counter = 0
 
 
     winNum = 0
@@ -366,6 +394,7 @@ async def main(address, loop, letter_input):
                     #letter = extractImageFromExcel(letter)
                     #extracts decision windows
                     #extractDecisionWindowsFromExcel()
+
 
 
                     cv2.imshow("Learn to Write!", letter)
@@ -390,6 +419,15 @@ async def main(address, loop, letter_input):
 
                     # only proceed if at least one contour was found
                     if len(cnts) > 0:
+
+                        refresh_counter +=1
+                        if refresh_counter >= 100:
+                            refresh_counter = 0
+                            print("refresh")
+                            letter = copy.deepcopy(letter_input)
+                            prevDwinNumber = 0
+
+
                         # find the largest contour in the mask, then use centroid
                         c = max(cnts, key=cv2.contourArea)
                         ((x, y), radius) = cv2.minEnclosingCircle(c)
@@ -405,16 +443,44 @@ async def main(address, loop, letter_input):
                             if oldStartFlag == False: #Clean the img on game start
                                 oldStartFlag = True
                                 #letter = cv2.imread('bw_image.png', 1)
+                                letter = copy.deepcopy(letter_input)
 
-
-
-                                letter = letter_input
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                             else: #Play the game
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
+
+
+                                current_Dwin = dWinList[winNum]
+                                next_dwin = current_Dwin
+                                if current_Dwin != len(dWinList):
+                                  next_dwin = dWinList[winNum+1]
+                                if prevDwinNumber != current_Dwin:
+                                    prevDwinNumber = current_Dwin
+                                    for x in range(current_Dwin.xmin, current_Dwin.xmax):
+                                        for y in range(current_Dwin.ymin, current_Dwin.ymax, -1):
+                                            if np.array_equal(letter[y, x], black):
+                                                #print ("x=%s y=%s"%(x, y))
+                                                letter[y, x] = white
+                                            else:
+                                                letter[y, x] = 0
+                                    for x in range(next_dwin.xmin, next_dwin.xmax):
+                                        for y in range(next_dwin.ymin, next_dwin.ymax, -1):
+                                            if np.array_equal(letter[y, x], black):
+                                                #print ("x=%s y=%s"%(x, y))
+                                                letter[y, x] = white
+                                            else:
+                                                letter[y, x] = (200, 50, 50)
+
+
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                                 print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
+                                print(("x = %s, y = %s, Radius = %s"% (x, y, radius)))
+                                # log_x = str(round(x, 2))
+                                # log_y = str(round(y, 2))
+                                # log_radius = log_x = str(round(radius, 2))
+                                logging.info("x = %s, y = %s, Radius = %s"% (x, y, radius))
+                                logging.info("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
                                 # msg = ("{0},{1}".format(direction, pixDistance))
                                 # print(msg)
 
@@ -475,7 +541,8 @@ async def main(address, loop, letter_input):
 
 ############################################################# Main ########################################################
 #extracts decision windows from excel
-
+logging.info("\n\n")
+logging.info("PROGRAM BEGINS")
 
 
 letter = readDirectoriesForFiles()
