@@ -449,6 +449,7 @@ async def main(address, loop, letter_input):
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                             else: #Play the game
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
+                                #print(winNum)
 
 
                                 current_Dwin = dWinList[winNum]
@@ -461,25 +462,27 @@ async def main(address, loop, letter_input):
                                         for y in range(current_Dwin.ymin, current_Dwin.ymax, -1):
                                             if np.array_equal(letter[y, x], black):
                                                 #print ("x=%s y=%s"%(x, y))
-                                                letter[y, x] = white
+                                                letter[y, x] = (200, 50, 50)
                                             else:
                                                 letter[y, x] = 0
-                                    for x in range(next_dwin.xmin, next_dwin.xmax):
-                                        for y in range(next_dwin.ymin, next_dwin.ymax, -1):
-                                            if np.array_equal(letter[y, x], black):
-                                                #print ("x=%s y=%s"%(x, y))
-                                                letter[y, x] = white
-                                            else:
-                                                letter[y, x] = (200, 50, 50)
+                                    # for x in range(next_dwin.xmin, next_dwin.xmax):
+                                    #     for y in range(next_dwin.ymin, next_dwin.ymax, -1):
+                                    #         if np.array_equal(letter[y, x], black):
+                                    #             #print ("x=%s y=%s"%(x, y))
+                                    #             letter[y, x] = white
+                                    #         else:
+                                    #             letter[y, x] = (200, 50, 50)
 
 
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                                 print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
-                                print(("x = %s, y = %s, Radius = %s"% (x, y, radius)))
+                                print("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax))
+                                print(("center_x = %s, center_y = %s, Radius = %s"% (centerX, centerY, radius)))
                                 # log_x = str(round(x, 2))
                                 # log_y = str(round(y, 2))
                                 # log_radius = log_x = str(round(radius, 2))
-                                logging.info("x = %s, y = %s, Radius = %s"% (x, y, radius))
+                                logging.info("x = %s, y = %s, Radius = %s"% (centerX, centerY, radius))
+                                logging.info(("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax)))
                                 logging.info("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
                                 # msg = ("{0},{1}".format(direction, pixDistance))
                                 # print(msg)
