@@ -78,7 +78,7 @@ score = 0
 # Configure logging parameters
 #log_date = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 log_date = time.strftime("%d-%m-%Y-%H_%M_%S", time.localtime())
-log_name = "LTW2.3_log_" + log_date + ".log"
+log_name = "LTW2.2_log_" + log_date + ".log"
 logging.basicConfig(filename="log_files/"+log_name, filemode="a", format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
                     level=logging.DEBUG)
 
@@ -155,20 +155,27 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
     if dWinNum == dWinNumEnd: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
         return dWinNumEnd, 0, True, 0, 0
     else:
+        #COLORS CURRENT DWIN!
+        #COLOR
+        #COLOR
+
+
 
         for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
             for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
                 if np.array_equal(img[y, x], black):
+                    print("I am on a black pixel yeehaw X:", inputX, "Y:",inputY, img[y,x])
                     yDistance = y - inputY
                     xDistance = x - inputX
                      #numpy.allclose(a, b, rtol=0, atol=3, equal_nan=False)
                     if yDistance <= 2 and xDistance <= 2: # a two pixel tolerance is added to the first window as a handicap for the user
+                        print("I am here: A")
                         score = score +1
                         pixDistFirst.clear()
                         pixDistSecond.clear()
                         pixDirFirst.clear()
                         pixDirSecond.clear()
-                        print("I am in early start-up")
+
                         return dWinNum, 0, False, score, direction
                     else:
                         FirstKey += 1 #Counts up as the loop goes on so every value has a unquie key in the dict
@@ -181,6 +188,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
             for y in range(dWinList[dWinNum+1].ymin, dWinList[dWinNum+1].ymax, -1):
                 if  np.array_equal(img[y, x],black):
                     if np.array_equal(img[y,x], [inputY, inputX]): #if the input is on a letter pixel add one to score and return
+                        print("I am here: B")
                         score = score +1
                         pixDistFirst.clear()
                         pixDistSecond.clear()
@@ -200,10 +208,8 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
         if SecondKey != 0:
             minPixDist.update({dWinNum+1: min(pixDistSecond)})  #the minimum distance from the second Dwin is taken
         else: minPixDist[dWinNum+1] = 1000  #used to asign a value to minPixDist if none was found
-        next_dwin = dWinList[dWinNum+1]
-        print("window:", dWinNum+1, "x", inputX, next_dwin.xmin, next_dwin.xmax, "y", inputY, next_dwin.ymax, next_dwin.ymin)
-        if (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)): #compares the two min distances
-            #if inputX in range(next_dwin.xmin, next_dwin.xmax) and inputY in range(next_dwin.ymin, next_dwin.ymax):
+        if (minPixDist[dWinNum+1] + 1) < minPixDist[dWinNum]: #compares the two min distances
+            print("I am here: C", minPixDist[dWinNum], minPixDist[dWinNum+1] + 1)
             direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
             #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
             print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
@@ -213,18 +219,6 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
             pixDirSecond.clear()
             #print("dw found 2 for dwin #%s, x:%s, y:%s, "% (dWinNum+1, x, y))
             return dWinNum+1, minPixDist[dWinNum+1], False, score, direction
-            # for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
-            #     for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
-            # direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
-            # #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            #
-            # print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            # pixDistFirst.clear()
-            # pixDistSecond.clear()
-            # pixDirFirst.clear()
-            # pixDirSecond.clear()
-            # #print("dw found 2 for dwin #%s, x:%s, y:%s, "% (dWinNum+1, x, y))
-            # return dWinNum+1, minPixDist[dWinNum+1], False, score, direction
             #returns the new dWinNum, min distance, flag signaling the game is to continue, the current score, and direction
         #end the gmae here elif dwin 36 ... need to make it go to dwin 36 no current logic for a 36th decision window
 # =============================================================================
@@ -232,7 +226,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
 #             return dWinNum, 0, True, score, direction
 # =============================================================================
         else:
-            print("Is valid input: ", (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)))
+            print("I am here: D")
             direction = pixDirFirst[minPixDist[dWinNum]]
             #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum, minPixDist[dWinNum], direction)) #used for debugging
             pixDistFirst.clear()
@@ -312,7 +306,14 @@ def readDirectoriesForFiles():
         else:
             print("invalid input, please enter 0, 1, 2 etc, or quit ")
 
+def ImageViewer(image_input):
+    new_image_temp = np.array(image_input, dtype=np.uint8)
+    image_height = len(new_image_temp)-1
+    image_width = len(new_image_temp[0])-1
+    new_image_temp = Image.fromarray(new_image_temp)
 
+    print("height, width", image_height, image_width)
+    new_image_temp.show()
 #function to grab the decision windows from excel
 def extractDecisionWindowsFromExcel():
     dwDict = {}
@@ -387,11 +388,14 @@ def init():
 
 
 async def main(address, loop, letter_input):
+
     startFlag = False
     oldStartFlag = False
     endFlag = False
     score = 0
     letter = copy.deepcopy(letter_input)
+    
+
     prevDwinNumber = 0
 
     refresh_counter = 0
@@ -500,7 +504,6 @@ async def main(address, loop, letter_input):
                                 # log_radius = log_x = str(round(radius, 2))
                                 logging.info("x = %s, y = %s, Radius = %s"% (centerX, centerY, radius))
                                 logging.info(("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax)))
-                                logging.info("Next Decision Window: xRange = %s, %s,  yRange = %s, %s"% (next_dwin.xmin, next_dwin.xmax, next_dwin.ymin, next_dwin.ymax))
                                 logging.info("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
                                 # msg = ("{0},{1}".format(direction, pixDistance))
                                 # print(msg)

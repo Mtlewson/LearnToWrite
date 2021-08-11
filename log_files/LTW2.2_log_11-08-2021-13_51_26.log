@@ -1,0 +1,404 @@
+2021-08-11 13:51:26,065 - INFO - root - 
+
+
+2021-08-11 13:51:26,066 - INFO - root - PROGRAM BEGINS
+2021-08-11 13:51:29,290 - DEBUG - asyncio - Using proactor: IocpProactor
+2021-08-11 13:51:29,755 - DEBUG - bleak.backends.dotnet.scanner - Received 4D:A0:C6:63:B8:B7: Unknown.
+2021-08-11 13:51:29,760 - DEBUG - bleak.backends.dotnet.scanner - Received 4D:A0:C6:63:B8:B7: Unknown.
+2021-08-11 13:51:29,881 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-11 13:51:30,253 - DEBUG - bleak.backends.dotnet.scanner - Received 57:AA:AD:DB:D3:DC: Unknown.
+2021-08-11 13:51:30,254 - DEBUG - bleak.backends.dotnet.scanner - Received 57:AA:AD:DB:D3:DC: Unknown.
+2021-08-11 13:51:30,585 - DEBUG - bleak.backends.dotnet.scanner - Received 4D:A0:C6:63:B8:B7: Unknown.
+2021-08-11 13:51:30,586 - DEBUG - bleak.backends.dotnet.scanner - Received 4D:A0:C6:63:B8:B7: Unknown.
+2021-08-11 13:51:30,938 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-11 13:51:30,938 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-11 13:51:31,049 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-11 13:51:31,417 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-11 13:51:31,887 - DEBUG - bleak.backends.dotnet.scanner - Received 57:AA:AD:DB:D3:DC: Unknown.
+2021-08-11 13:51:31,888 - DEBUG - bleak.backends.dotnet.scanner - Received 57:AA:AD:DB:D3:DC: Unknown.
+2021-08-11 13:51:32,232 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-08-11 13:51:32,233 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-08-11 13:51:32,234 - DEBUG - bleak.backends.dotnet.scanner - 6 devices found. Watcher status: 3.
+2021-08-11 13:51:32,234 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-08-11 13:51:37,785 - DEBUG - bleak.backends.dotnet.client - _ConnectionStatusChanged_Handler: 1
+2021-08-11 13:51:37,785 - DEBUG - bleak.backends.dotnet.client - Get Services...
+2021-08-11 13:51:37,843 - INFO - bleak.backends.dotnet.client - Services resolved for BleakClientDotNet (7c:9e:bd:ee:7a:82)
+2021-08-11 13:51:45,742 - INFO - root - x = 498, y = 121, Radius = 87.46686553955078
+2021-08-11 13:51:45,742 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:45,742 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:45,890 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:45,928 - INFO - root - x = 503, y = 121, Radius = 88.67083740234375
+2021-08-11 13:51:45,928 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:45,928 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,010 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,047 - INFO - root - x = 502, y = 123, Radius = 85.74681854248047
+2021-08-11 13:51:46,047 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,047 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,130 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,155 - INFO - root - x = 501, y = 123, Radius = 84.43163299560547
+2021-08-11 13:51:46,155 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,155 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,250 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,265 - INFO - root - x = 500, y = 121, Radius = 84.3446273803711
+2021-08-11 13:51:46,265 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,265 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,370 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,402 - INFO - root - x = 497, y = 121, Radius = 81.04981231689453
+2021-08-11 13:51:46,402 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,402 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,489 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,526 - INFO - root - x = 493, y = 127, Radius = 87.69274139404297
+2021-08-11 13:51:46,526 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,526 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:46,610 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:46,640 - INFO - root - x = 480, y = 129, Radius = 88.35308074951172
+2021-08-11 13:51:46,640 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,640 - INFO - root - Distance = 19, direction = 4, Win# 0
+2021-08-11 13:51:46,729 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:46,760 - INFO - root - x = 472, y = 129, Radius = 84.31804656982422
+2021-08-11 13:51:46,760 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,760 - INFO - root - Distance = 26, direction = 4, Win# 0
+2021-08-11 13:51:46,850 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:46,889 - INFO - root - x = 464, y = 130, Radius = 83.29475402832031
+2021-08-11 13:51:46,889 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:46,889 - INFO - root - Distance = 34, direction = 4, Win# 0
+2021-08-11 13:51:46,970 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:47,007 - INFO - root - x = 455, y = 135, Radius = 83.68103790283203
+2021-08-11 13:51:47,007 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,007 - INFO - root - Distance = 44, direction = 4, Win# 0
+2021-08-11 13:51:47,090 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:47,138 - INFO - root - x = 452, y = 137, Radius = 88.81451416015625
+2021-08-11 13:51:47,139 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,139 - INFO - root - Distance = 47, direction = 4, Win# 0
+2021-08-11 13:51:47,210 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:47,254 - INFO - root - x = 444, y = 138, Radius = 82.66962432861328
+2021-08-11 13:51:47,254 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,254 - INFO - root - Distance = 55, direction = 4, Win# 0
+2021-08-11 13:51:47,329 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,361 - INFO - root - x = 440, y = 144, Radius = 86.70684814453125
+2021-08-11 13:51:47,361 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,361 - INFO - root - Distance = 61, direction = 4, Win# 0
+2021-08-11 13:51:47,449 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,477 - INFO - root - x = 436, y = 146, Radius = 88.07392883300781
+2021-08-11 13:51:47,477 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,477 - INFO - root - Distance = 66, direction = 4, Win# 0
+2021-08-11 13:51:47,570 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,609 - INFO - root - x = 418, y = 156, Radius = 90.70841979980469
+2021-08-11 13:51:47,610 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,610 - INFO - root - Distance = 86, direction = 4, Win# 0
+2021-08-11 13:51:47,690 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,719 - INFO - root - x = 413, y = 161, Radius = 73.57038879394531
+2021-08-11 13:51:47,719 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,719 - INFO - root - Distance = 93, direction = 4, Win# 0
+2021-08-11 13:51:47,809 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,842 - INFO - root - x = 411, y = 168, Radius = 72.58453369140625
+2021-08-11 13:51:47,842 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,842 - INFO - root - Distance = 98, direction = 4, Win# 0
+2021-08-11 13:51:47,930 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:47,972 - INFO - root - x = 422, y = 166, Radius = 72.18389892578125
+2021-08-11 13:51:47,972 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:47,972 - INFO - root - Distance = 88, direction = 4, Win# 0
+2021-08-11 13:51:48,049 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:48,089 - INFO - root - x = 444, y = 163, Radius = 71.3863754272461
+2021-08-11 13:51:48,089 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,089 - INFO - root - Distance = 68, direction = 4, Win# 0
+2021-08-11 13:51:48,169 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,1')
+2021-08-11 13:51:48,210 - INFO - root - x = 454, y = 170, Radius = 88.1888198852539
+2021-08-11 13:51:48,210 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,210 - INFO - root - Distance = 66, direction = 1, Win# 0
+2021-08-11 13:51:48,289 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:48,341 - INFO - root - x = 469, y = 170, Radius = 89.76785278320312
+2021-08-11 13:51:48,341 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,341 - INFO - root - Distance = 58, direction = 1, Win# 0
+2021-08-11 13:51:48,409 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:48,443 - INFO - root - x = 481, y = 164, Radius = 81.739013671875
+2021-08-11 13:51:48,443 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,443 - INFO - root - Distance = 47, direction = 1, Win# 0
+2021-08-11 13:51:48,529 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,0')
+2021-08-11 13:51:48,549 - INFO - root - x = 497, y = 160, Radius = 79.79515075683594
+2021-08-11 13:51:48,549 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,549 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:48,649 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:48,685 - INFO - root - x = 506, y = 164, Radius = 83.31426239013672
+2021-08-11 13:51:48,685 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,685 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:48,770 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:48,807 - INFO - root - x = 516, y = 172, Radius = 83.20298767089844
+2021-08-11 13:51:48,807 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,807 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:48,889 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:48,917 - INFO - root - x = 524, y = 198, Radius = 79.82804107666016
+2021-08-11 13:51:48,917 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:48,918 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,010 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,041 - INFO - root - x = 526, y = 199, Radius = 74.90996551513672
+2021-08-11 13:51:49,041 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,041 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,129 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,150 - INFO - root - x = 518, y = 227, Radius = 76.63233947753906
+2021-08-11 13:51:49,150 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,150 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,249 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,270 - INFO - root - x = 511, y = 229, Radius = 74.82823181152344
+2021-08-11 13:51:49,270 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,270 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,370 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,409 - INFO - root - x = 523, y = 195, Radius = 75.8717041015625
+2021-08-11 13:51:49,410 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,410 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,489 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,519 - INFO - root - x = 514, y = 161, Radius = 76.09546661376953
+2021-08-11 13:51:49,519 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,519 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,670 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,703 - INFO - root - x = 491, y = 131, Radius = 75.08171844482422
+2021-08-11 13:51:49,703 - INFO - root - Decision Window: xRange = 489, 502,  yRange = 129, 89
+2021-08-11 13:51:49,703 - INFO - root - Distance = 0, direction = 0, Win# 0
+2021-08-11 13:51:49,790 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:49,836 - INFO - root - x = 480, y = 104, Radius = 72.03897094726562
+2021-08-11 13:51:49,836 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:49,836 - INFO - root - Distance = 5, direction = 1, Win# 1
+2021-08-11 13:51:49,910 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,0')
+2021-08-11 13:51:49,954 - INFO - root - x = 475, y = 106, Radius = 73.08051300048828
+2021-08-11 13:51:49,954 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:49,954 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:50,029 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:50,061 - INFO - root - x = 473, y = 115, Radius = 74.08282470703125
+2021-08-11 13:51:50,061 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,061 - INFO - root - Distance = 18, direction = 1, Win# 1
+2021-08-11 13:51:50,149 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,0')
+2021-08-11 13:51:50,171 - INFO - root - x = 465, y = 131, Radius = 75.06007385253906
+2021-08-11 13:51:50,171 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,171 - INFO - root - Distance = 36, direction = 1, Win# 1
+2021-08-11 13:51:50,269 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,0')
+2021-08-11 13:51:50,288 - INFO - root - x = 453, y = 162, Radius = 74.78985595703125
+2021-08-11 13:51:50,288 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,288 - INFO - root - Distance = 68, direction = 1, Win# 1
+2021-08-11 13:51:50,389 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:50,430 - INFO - root - x = 454, y = 182, Radius = 76.32178497314453
+2021-08-11 13:51:50,430 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,430 - INFO - root - Distance = 86, direction = 1, Win# 1
+2021-08-11 13:51:50,570 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:50,588 - INFO - root - x = 462, y = 197, Radius = 78.19377136230469
+2021-08-11 13:51:50,588 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,588 - INFO - root - Distance = 98, direction = 1, Win# 1
+2021-08-11 13:51:50,689 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:50,724 - INFO - root - x = 472, y = 198, Radius = 78.62897491455078
+2021-08-11 13:51:50,725 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,725 - INFO - root - Distance = 97, direction = 1, Win# 1
+2021-08-11 13:51:50,810 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:50,843 - INFO - root - x = 488, y = 184, Radius = 76.41999053955078
+2021-08-11 13:51:50,843 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,843 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:50,930 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:50,952 - INFO - root - x = 497, y = 170, Radius = 76.2841567993164
+2021-08-11 13:51:50,952 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:50,952 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,050 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,091 - INFO - root - x = 502, y = 122, Radius = 69.6456298828125
+2021-08-11 13:51:51,091 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,091 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,170 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,185 - INFO - root - x = 506, y = 110, Radius = 72.09207153320312
+2021-08-11 13:51:51,185 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,185 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,289 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,321 - INFO - root - x = 508, y = 106, Radius = 71.43936920166016
+2021-08-11 13:51:51,321 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,322 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,410 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,447 - INFO - root - x = 506, y = 105, Radius = 69.76041412353516
+2021-08-11 13:51:51,447 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,447 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,530 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,574 - INFO - root - x = 495, y = 98, Radius = 63.88761901855469
+2021-08-11 13:51:51,574 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,575 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,649 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,682 - INFO - root - x = 477, y = 94, Radius = 60.65888977050781
+2021-08-11 13:51:51,682 - INFO - root - Decision Window: xRange = 477, 488,  yRange = 118, 82
+2021-08-11 13:51:51,682 - INFO - root - Distance = 0, direction = 0, Win# 1
+2021-08-11 13:51:51,769 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:51,791 - INFO - root - x = 460, y = 90, Radius = 57.07704544067383
+2021-08-11 13:51:51,791 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:51,792 - INFO - root - Distance = 6, direction = 4, Win# 2
+2021-08-11 13:51:51,890 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,0')
+2021-08-11 13:51:51,923 - INFO - root - x = 589, y = 458, Radius = 75.29286193847656
+2021-08-11 13:51:51,923 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:51,923 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,009 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,049 - INFO - root - x = 586, y = 455, Radius = 87.89350128173828
+2021-08-11 13:51:52,049 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,049 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,129 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,156 - INFO - root - x = 568, y = 444, Radius = 75.4719467163086
+2021-08-11 13:51:52,156 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,156 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,250 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,285 - INFO - root - x = 583, y = 440, Radius = 85.37134552001953
+2021-08-11 13:51:52,285 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,285 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,370 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,406 - INFO - root - x = 567, y = 451, Radius = 85.0678482055664
+2021-08-11 13:51:52,406 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,406 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,489 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,524 - INFO - root - x = 559, y = 462, Radius = 87.15800476074219
+2021-08-11 13:51:52,524 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,524 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,610 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,637 - INFO - root - x = 556, y = 471, Radius = 88.56928253173828
+2021-08-11 13:51:52,637 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,637 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,789 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,808 - INFO - root - x = 552, y = 477, Radius = 90.4061279296875
+2021-08-11 13:51:52,808 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,808 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:52,909 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:52,921 - INFO - root - x = 553, y = 478, Radius = 87.9119873046875
+2021-08-11 13:51:52,921 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:52,921 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,029 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:53,067 - INFO - root - x = 555, y = 481, Radius = 83.68103790283203
+2021-08-11 13:51:53,067 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,067 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,149 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:53,192 - INFO - root - x = 560, y = 486, Radius = 78.80682373046875
+2021-08-11 13:51:53,192 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,192 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,269 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:53,310 - INFO - root - x = 567, y = 491, Radius = 70.99657440185547
+2021-08-11 13:51:53,310 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,310 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,390 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:53,428 - INFO - root - x = 450, y = 168, Radius = 51.22997283935547
+2021-08-11 13:51:53,428 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,428 - INFO - root - Distance = 78, direction = 1, Win# 2
+2021-08-11 13:51:53,509 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:53,530 - INFO - root - x = 490, y = 242, Radius = 45.41210174560547
+2021-08-11 13:51:53,530 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,530 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,630 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:53,673 - INFO - root - x = 604, y = 306, Radius = 32.128746032714844
+2021-08-11 13:51:53,673 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:53,673 - INFO - root - Distance = 0, direction = 0, Win# 2
+2021-08-11 13:51:53,749 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:54,209 - INFO - root - x = 607, y = 56, Radius = 101.24238586425781
+2021-08-11 13:51:54,209 - INFO - root - Decision Window: xRange = 466, 476,  yRange = 115, 80
+2021-08-11 13:51:54,209 - INFO - root - Distance = 137, direction = 2, Win# 2
+2021-08-11 13:51:54,290 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'2,2')
+2021-08-11 13:51:54,331 - INFO - root - x = 58, y = 61, Radius = 10.547611236572266
+2021-08-11 13:51:54,331 - INFO - root - Decision Window: xRange = 458, 465,  yRange = 98, 78
+2021-08-11 13:51:54,331 - INFO - root - Distance = 400, direction = 4, Win# 3
+2021-08-11 13:51:54,409 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:54,461 - INFO - root - x = 83, y = 123, Radius = 96.5000991821289
+2021-08-11 13:51:54,461 - INFO - root - Decision Window: xRange = 443, 457,  yRange = 96, 69
+2021-08-11 13:51:54,461 - INFO - root - Distance = 363, direction = 4, Win# 4
+2021-08-11 13:51:54,529 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:54,564 - INFO - root - x = 95, y = 174, Radius = 182.69178771972656
+2021-08-11 13:51:54,564 - INFO - root - Decision Window: xRange = 431, 442,  yRange = 87, 66
+2021-08-11 13:51:54,564 - INFO - root - Distance = 350, direction = 4, Win# 5
+2021-08-11 13:51:54,649 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:54,689 - INFO - root - x = 620, y = 54, Radius = 14.560319900512695
+2021-08-11 13:51:54,689 - INFO - root - Decision Window: xRange = 431, 442,  yRange = 87, 66
+2021-08-11 13:51:54,689 - INFO - root - Distance = 180, direction = 2, Win# 5
+2021-08-11 13:51:54,769 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'2,2')
+2021-08-11 13:51:54,814 - INFO - root - x = 52, y = 56, Radius = 8.544103622436523
+2021-08-11 13:51:54,814 - INFO - root - Decision Window: xRange = 420, 430,  yRange = 84, 65
+2021-08-11 13:51:54,814 - INFO - root - Distance = 368, direction = 4, Win# 6
+2021-08-11 13:51:54,890 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:54,932 - INFO - root - x = 61, y = 70, Radius = 27.021041870117188
+2021-08-11 13:51:54,933 - INFO - root - Decision Window: xRange = 400, 419,  yRange = 83, 65
+2021-08-11 13:51:54,933 - INFO - root - Distance = 339, direction = 4, Win# 7
+2021-08-11 13:51:55,010 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,042 - INFO - root - x = 66, y = 91, Radius = 62.46709060668945
+2021-08-11 13:51:55,042 - INFO - root - Decision Window: xRange = 386, 399,  yRange = 85, 70
+2021-08-11 13:51:55,042 - INFO - root - Distance = 320, direction = 4, Win# 8
+2021-08-11 13:51:55,129 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,166 - INFO - root - x = 68, y = 113, Radius = 90.91902160644531
+2021-08-11 13:51:55,166 - INFO - root - Decision Window: xRange = 371, 385,  yRange = 92, 72
+2021-08-11 13:51:55,166 - INFO - root - Distance = 304, direction = 4, Win# 9
+2021-08-11 13:51:55,249 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,292 - INFO - root - x = 72, y = 117, Radius = 102.30534362792969
+2021-08-11 13:51:55,292 - INFO - root - Decision Window: xRange = 358, 370,  yRange = 98, 74
+2021-08-11 13:51:55,292 - INFO - root - Distance = 286, direction = 4, Win# 10
+2021-08-11 13:51:55,369 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,413 - INFO - root - x = 64, y = 87, Radius = 56.47354507446289
+2021-08-11 13:51:55,413 - INFO - root - Decision Window: xRange = 348, 357,  yRange = 112, 75
+2021-08-11 13:51:55,413 - INFO - root - Distance = 284, direction = 4, Win# 11
+2021-08-11 13:51:55,489 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,534 - INFO - root - x = 68, y = 89, Radius = 56.38493728637695
+2021-08-11 13:51:55,534 - INFO - root - Decision Window: xRange = 339, 347,  yRange = 125, 90
+2021-08-11 13:51:55,534 - INFO - root - Distance = 272, direction = 4, Win# 12
+2021-08-11 13:51:55,609 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,644 - INFO - root - x = 72, y = 99, Radius = 81.18045043945312
+2021-08-11 13:51:55,644 - INFO - root - Decision Window: xRange = 333, 338,  yRange = 146, 106
+2021-08-11 13:51:55,644 - INFO - root - Distance = 263, direction = 4, Win# 13
+2021-08-11 13:51:55,730 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,766 - INFO - root - x = 66, y = 93, Radius = 63.561092376708984
+2021-08-11 13:51:55,766 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:55,766 - INFO - root - Distance = 268, direction = 4, Win# 14
+2021-08-11 13:51:55,850 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:55,891 - INFO - root - x = 64, y = 85, Radius = 54.113407135009766
+2021-08-11 13:51:55,891 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:55,891 - INFO - root - Distance = 272, direction = 4, Win# 14
+2021-08-11 13:51:55,970 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,012 - INFO - root - x = 61, y = 79, Radius = 41.03971481323242
+2021-08-11 13:51:56,012 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,012 - INFO - root - Distance = 276, direction = 4, Win# 14
+2021-08-11 13:51:56,089 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,133 - INFO - root - x = 62, y = 69, Radius = 29.681743621826172
+2021-08-11 13:51:56,133 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,133 - INFO - root - Distance = 278, direction = 4, Win# 14
+2021-08-11 13:51:56,209 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,246 - INFO - root - x = 63, y = 68, Radius = 29.689029693603516
+2021-08-11 13:51:56,246 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,246 - INFO - root - Distance = 277, direction = 4, Win# 14
+2021-08-11 13:51:56,329 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,367 - INFO - root - x = 64, y = 78, Radius = 43.42898941040039
+2021-08-11 13:51:56,367 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,367 - INFO - root - Distance = 273, direction = 4, Win# 14
+2021-08-11 13:51:56,449 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,485 - INFO - root - x = 60, y = 80, Radius = 43.01753616333008
+2021-08-11 13:51:56,485 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,485 - INFO - root - Distance = 277, direction = 4, Win# 14
+2021-08-11 13:51:56,570 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,613 - INFO - root - x = 63, y = 77, Radius = 43.3985595703125
+2021-08-11 13:51:56,613 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,613 - INFO - root - Distance = 275, direction = 4, Win# 14
+2021-08-11 13:51:56,689 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,725 - INFO - root - x = 65, y = 81, Radius = 49.56319046020508
+2021-08-11 13:51:56,725 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,725 - INFO - root - Distance = 272, direction = 4, Win# 14
+2021-08-11 13:51:56,810 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,847 - INFO - root - x = 64, y = 81, Radius = 50.67800521850586
+2021-08-11 13:51:56,848 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,848 - INFO - root - Distance = 273, direction = 4, Win# 14
+2021-08-11 13:51:56,929 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:56,967 - INFO - root - x = 66, y = 80, Radius = 43.9915771484375
+2021-08-11 13:51:56,967 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:56,967 - INFO - root - Distance = 271, direction = 4, Win# 14
+2021-08-11 13:51:57,050 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,3')
+2021-08-11 13:51:57,094 - INFO - root - x = 511, y = 91, Radius = 180.76791381835938
+2021-08-11 13:51:57,094 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:57,094 - INFO - root - Distance = 186, direction = 2, Win# 14
+2021-08-11 13:51:57,170 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'2,2')
+2021-08-11 13:51:57,218 - INFO - root - x = 559, y = 259, Radius = 177.72250366210938
+2021-08-11 13:51:57,218 - INFO - root - Decision Window: xRange = 323, 332,  yRange = 162, 126
+2021-08-11 13:51:57,218 - INFO - root - Distance = 0, direction = 0, Win# 14
+2021-08-11 13:51:57,289 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,2')
+2021-08-11 13:51:57,318 - INFO - root - x = 322, y = 271, Radius = 304.3900451660156
+2021-08-11 13:51:57,318 - INFO - root - Decision Window: xRange = 323, 337,  yRange = 196, 163
+2021-08-11 13:51:57,318 - INFO - root - Distance = 85, direction = 1, Win# 15
+2021-08-11 13:51:57,410 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'1,1')
+2021-08-11 13:51:57,449 - INFO - root - x = 208, y = 282, Radius = 270.4002685546875
+2021-08-11 13:51:57,449 - INFO - root - Decision Window: xRange = 323, 337,  yRange = 196, 163
+2021-08-11 13:51:57,449 - INFO - root - Distance = 159, direction = 4, Win# 15
+2021-08-11 13:51:57,529 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'4,2')
+2021-08-11 13:51:57,571 - INFO - root - x = 589, y = 85, Radius = 149.91342163085938
+2021-08-11 13:51:57,571 - INFO - root - Decision Window: xRange = 338, 349,  yRange = 212, 178
+2021-08-11 13:51:57,571 - INFO - root - Distance = 267, direction = 2, Win# 16
+2021-08-11 13:51:57,649 - DEBUG - bleak.backends.dotnet.client - Write Characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e : bytearray(b'2,3')
+2021-08-11 13:51:57,682 - INFO - root - x = 581, y = 88, Radius = 169.6887969970703
+2021-08-11 13:51:57,682 - INFO - root - Decision Window: xRange = 350, 363,  yRange = 220, 186
+2021-08-11 13:51:57,682 - INFO - root - Distance = 252, direction = 2, Win# 17
