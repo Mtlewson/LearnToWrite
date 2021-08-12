@@ -164,7 +164,8 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
         for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
             for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
                 if np.array_equal(img[y, x], black):
-                    print("I am on a black pixel yeehaw X:", inputX, "Y:",inputY, img[y,x])
+                    #broken
+                    #print("I am on a black pixel yeehaw X:", inputX, "Y:",inputY, img[y,x])
                     yDistance = y - inputY
                     xDistance = x - inputX
                      #numpy.allclose(a, b, rtol=0, atol=3, equal_nan=False)
@@ -394,7 +395,7 @@ async def main(address, loop, letter_input):
     endFlag = False
     score = 0
     letter = copy.deepcopy(letter_input)
-    
+
 
     prevDwinNumber = 0
 

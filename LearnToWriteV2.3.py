@@ -163,6 +163,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
                     xDistance = x - inputX
                      #numpy.allclose(a, b, rtol=0, atol=3, equal_nan=False)
                     if yDistance <= 2 and xDistance <= 2: # a two pixel tolerance is added to the first window as a handicap for the user
+                        print("I am here A:")
                         score = score +1
                         pixDistFirst.clear()
                         pixDistSecond.clear()
@@ -181,6 +182,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
             for y in range(dWinList[dWinNum+1].ymin, dWinList[dWinNum+1].ymax, -1):
                 if  np.array_equal(img[y, x],black):
                     if np.array_equal(img[y,x], [inputY, inputX]): #if the input is on a letter pixel add one to score and return
+                        print("I am here B:")
                         score = score +1
                         pixDistFirst.clear()
                         pixDistSecond.clear()
@@ -203,6 +205,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
         next_dwin = dWinList[dWinNum+1]
         print("window:", dWinNum+1, "x", inputX, next_dwin.xmin, next_dwin.xmax, "y", inputY, next_dwin.ymax, next_dwin.ymin)
         if (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)): #compares the two min distances
+            print("I am here C:")
             #if inputX in range(next_dwin.xmin, next_dwin.xmax) and inputY in range(next_dwin.ymin, next_dwin.ymax):
             direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
             #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
@@ -232,6 +235,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
 #             return dWinNum, 0, True, score, direction
 # =============================================================================
         else:
+            print("I am here D")
             print("Is valid input: ", (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)))
             direction = pixDirFirst[minPixDist[dWinNum]]
             #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum, minPixDist[dWinNum], direction)) #used for debugging
