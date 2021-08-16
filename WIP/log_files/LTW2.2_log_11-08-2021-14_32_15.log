@@ -1,0 +1,15 @@
+2021-08-11 14:32:15,388 - INFO - root - 
+
+
+2021-08-11 14:32:15,388 - INFO - root - PROGRAM BEGINS
+2021-08-11 14:32:17,344 - DEBUG - asyncio - Using proactor: IocpProactor
+2021-08-11 14:32:19,296 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-11 14:32:19,999 - DEBUG - bleak.backends.dotnet.scanner - Received 47:76:B2:B7:41:7E: Unknown.
+2021-08-11 14:32:20,000 - DEBUG - bleak.backends.dotnet.scanner - Received 47:76:B2:B7:41:7E: Unknown.
+2021-08-11 14:32:20,255 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-08-11 14:32:20,256 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-08-11 14:32:20,256 - DEBUG - bleak.backends.dotnet.scanner - 3 devices found. Watcher status: 3.
+2021-08-11 14:32:20,257 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-08-11 14:32:22,788 - DEBUG - bleak.backends.dotnet.client - _ConnectionStatusChanged_Handler: 1
+2021-08-11 14:32:22,788 - DEBUG - bleak.backends.dotnet.client - Get Services...
+2021-08-11 14:32:22,844 - INFO - bleak.backends.dotnet.client - Services resolved for BleakClientDotNet (7c:9e:bd:ee:7a:82)
