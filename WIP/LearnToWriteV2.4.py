@@ -145,112 +145,38 @@ def getdirection(inputX, inputY, x, y):
 
 
 def getMinDistance (img, dWinNum, inputX, inputY, score):
-    FirstKey = 0 #used as flags for distance to not update min distince if no new values
-    SecondKey = 0 #used as flags for distance to not update min distince if no new values
     direction = 0
-    #print("DwinNum = %s"%(dWinNum))  #used for debugging
+    buffer = 2 #extra space for the decision windows
+
     dWinNumEnd = len(dWinList)-2
-    # if dWinNum == 36: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
-    #     return 36, 0, True
+
     if dWinNum == dWinNumEnd: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
-        return dWinNumEnd, 0, True, 0, 0
+        return dWinNumEnd, 0, True, 0, 1
     else:
-
-        for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
-            for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
-                if np.array_equal(img[y, x], black):
-                    yDistance = y - inputY
-                    xDistance = x - inputX
-                     #numpy.allclose(a, b, rtol=0, atol=3, equal_nan=False)
-                    if yDistance <= 2 and xDistance <= 2: # a two pixel tolerance is added to the first window as a handicap for the user
-                        print("I am here A:")
-                        print((inputX in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax) and inputY in range(dWinList[dWinNum].ymax, dWinList[dWinNum].ymin)))
-                        #print(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax) and inputY in range(dWinList[dWinNum].ymax, dWinList[dWinNum].ymin))
-                        score = score +1
-                        pixDistFirst.clear()
-                        pixDistSecond.clear()
-                        pixDirFirst.clear()
-                        pixDirSecond.clear()
-                        #print("I am in early start-up")
-                        return dWinNum, 0, False, score, direction
-                    else:
-                        FirstKey += 1 #Counts up as the loop goes on so every value has a unquie key in the dict
-                        totalDisOne = int(totalDistance(x, y, inputX, inputY)) #the distance of the user input from the black pixel is calculated
-                        pixDistFirst.insert(FirstKey, totalDisOne) #the distance is stored in a dict with the "FirstKey" acting as the key
-                        pixDirFirst[totalDisOne] =  getdirection(inputX, inputY, x, y) #A direction is stored with using the distance as its location in a list
-
-
-        for x in range(dWinList[dWinNum+1].xmin, dWinList[dWinNum+1].xmax):
-            for y in range(dWinList[dWinNum+1].ymin, dWinList[dWinNum+1].ymax, -1):
-                if  np.array_equal(img[y, x],black):
-                    if np.array_equal(img[y,x], [inputY, inputX]): #if the input is on a letter pixel add one to score and return
-                        print("I am here B:")
-                        score = score +1
-                        pixDistFirst.clear()
-                        pixDistSecond.clear()
-                        pixDirFirst.clear()
-                        pixDirSecond.clear()
-                        print("dw found for dwin #%s, x:%s, y:%s, "% (dWinNum+1, x, y))
-                        return dWinNum+1, 0, False, score, direction
-                    else:
-                        SecondKey += 1 #Counts up as the loop goes on so every value has a unquie key in the dict
-                        totalDisTwo = int(totalDistance(x, y, inputX, inputY))
-                        pixDistSecond.insert(SecondKey, totalDisTwo)
-                        pixDirSecond[totalDisTwo] =  getdirection(inputX, inputY, x, y)
-
-        if FirstKey != 0:
-            minPixDist.update({dWinNum: min(pixDistFirst)}) #the minimum distance from the first Dwin is taken
-        else: minPixDist[dWinNum] = 1000 #used to asign a value to minPixDist if none was found
-        if SecondKey != 0:
-            minPixDist.update({dWinNum+1: min(pixDistSecond)})  #the minimum distance from the second Dwin is taken
-        else: minPixDist[dWinNum+1] = 1000  #used to asign a value to minPixDist if none was found
+        current_dwin = dWinList[dWinNum]
         next_dwin = dWinList[dWinNum+1]
-        print("window:", dWinNum+1, "x", inputX, next_dwin.xmin, next_dwin.xmax, "y", inputY, next_dwin.ymax, next_dwin.ymin)
-        if (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)): #compares the two min distances
-            print("I am here C:")
-            #if inputX in range(next_dwin.xmin, next_dwin.xmax) and inputY in range(next_dwin.ymin, next_dwin.ymax):
-            direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
-            #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            pixDistFirst.clear()
-            pixDistSecond.clear()
-            pixDirFirst.clear()
-            pixDirSecond.clear()
-            #print("dw found 2 for dwin #%s, x:%s, y:%s, "% (dWinNum+1, x, y))
-            return dWinNum+1, minPixDist[dWinNum+1], False, score, direction
-            # for x in range(dWinList[dWinNum].xmin, dWinList[dWinNum].xmax):
-            #     for y in range(dWinList[dWinNum].ymin, dWinList[dWinNum].ymax, -1):
-            # direction = pixDirSecond[minPixDist[dWinNum+1]] #grabs the direction associated with the minimum distance
-            # #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            #
-            # print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum+1, minPixDist[dWinNum+1], direction))  #used for debugging
-            # pixDistFirst.clear()
-            # pixDistSecond.clear()
-            # pixDirFirst.clear()
-            # pixDirSecond.clear()
-            # #print("dw found 2 for dwin #%s, x:%s, y:%s, "% (dWinNum+1, x, y))
-            # return dWinNum+1, minPixDist[dWinNum+1], False, score, direction
-            #returns the new dWinNum, min distance, flag signaling the game is to continue, the current score, and direction
-        #end the gmae here elif dwin 36 ... need to make it go to dwin 36 no current logic for a 36th decision window
-# =============================================================================
-#         else:
-#             return dWinNum, 0, True, score, direction
-# =============================================================================
+
+        #calculates the coordinates of the next decision window
+        dwin_x_midpt = int((next_dwin.xmin + next_dwin.xmax)/2)
+        dwin_y_midpt = int((next_dwin.ymin + next_dwin.ymax)/2)
+        #calculates direction and distance of next decision window
+        direction = getdirection(inputX, inputY, dwin_x_midpt, dwin_y_midpt)
+        distance = totalDistance(inputX, inputY, dwin_x_midpt, dwin_y_midpt)
+
+        #checks if in range of NEXT decision window
+        if (inputX in range(next_dwin.xmin-buffer, next_dwin.xmax+buffer) and inputY in range(next_dwin.ymax-buffer, next_dwin.ymin+buffer)):
+            print("I am in the NEXT dwin:")
+            return dWinNum+1, 0, False, score, direction
+
+        #checks if in range of CURRENT decision window
+        elif (inputX in range(current_dwin.xmin-buffer, current_dwin.xmax+buffer) and inputY in range(current_dwin.ymax-buffer, current_dwin.ymin+buffer)):
+            print("I am in the current DWIN:")
+            return dWinNum, distance, False, score, direction
+
+        #if not in range of either dwin
         else:
-            print("I am here D")
-            print("Is valid input: ", (inputX in range(next_dwin.xmin-10, next_dwin.xmax+10) and inputY in range(next_dwin.ymax-10, next_dwin.ymin+10)))
-            direction = pixDirFirst[minPixDist[dWinNum]]
-            #print ("Window#= %s, Distance = %s, direction = %s"% (dWinNum, minPixDist[dWinNum], direction)) #used for debugging
-            pixDistFirst.clear()
-            pixDistSecond.clear()
-            pixDirFirst.clear()
-            pixDirSecond.clear()
-            return dWinNum, minPixDist[dWinNum], False, score, direction
-
-
-
-def extractEntireImage(address):
-    print()
+            print("No dwin in range")
+            return dWinNum, distance, False, score, direction
 
 #function to grab the letter image from excel (but not the decision windows)
 def extractImageFromExcel(letter):
@@ -307,6 +233,7 @@ def readDirectoriesForFiles():
         if user_input in file_dict.keys():
             valid_input = True
             print(file_dict[user_input], "selected!")
+            logging.info("Image: " + str(file_dict[user_input]))
             excelFilePath = 'letter_images/' + file_dict[user_input]
             df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
             letter = df.to_numpy()
@@ -343,14 +270,10 @@ def extractDecisionWindowsFromExcel():
      #dw format: Ymin, YMax, XMin, XMax
     for key in dwDict:
         if len(dwDict[key]) == 4:
-            #print(dwDict[key])
             x1 = dwDict[key][0]
             x2 = dwDict[key][2]
             y1 = dwDict[key][1]
             y2 = dwDict[key][3]
-            #print(dwDict[key][1], dwDict[key][3])
-            #print(y1,y2,x1,x2)
-
             #determine Ymin, YMax, XMin, XMax
             #ymin is bigger
             #xmax is bigger
@@ -410,13 +333,6 @@ async def main(address, loop, letter_input):
             async with BleakClient(address, loop=loop) as client:
                 print("Connected!\n")
                 while True: # Main loop, user selects test case
-                    #EDIT here
-                    #EDIT HERE
-                    #letter = extractImageFromExcel(letter)
-                    #extracts decision windows
-                    #extractDecisionWindowsFromExcel()
-
-
 
                     cv2.imshow("Learn to Write!", letter)
                     key = cv2.waitKey(1) & 0xFF
@@ -441,12 +357,12 @@ async def main(address, loop, letter_input):
                     # only proceed if at least one contour was found
                     if len(cnts) > 0:
 
-                        # refresh_counter +=1
-                        # if refresh_counter >= 100:
-                        #     refresh_counter = 0
-                        #     print("refresh")
-                        #     letter = copy.deepcopy(letter_input)
-                        #     prevDwinNumber = 0
+                        refresh_counter +=1
+                        if refresh_counter >= 100:
+                            refresh_counter = 0
+                            print("refresh")
+                            letter = copy.deepcopy(letter_input)
+                            prevDwinNumber = 0
 
 
                         # find the largest contour in the mask, then use centroid
@@ -541,6 +457,9 @@ async def main(address, loop, letter_input):
 
                                 elif direction == 4: #right
                                     user_command = b"4," + intensity
+                                else: #something went wrong
+                                    print("Error in direction, please check direction")
+                                    user_command = b"4," + intensity
 
 
                                 #command_list = [b"1,2", b"2,2", b"3,2", b"4,2"]
@@ -557,7 +476,7 @@ async def main(address, loop, letter_input):
                     if key == ord("q") or endFlag == True:
                         #msg = ("{0},{1}".format(0, 0 ))
                         #client.publish("motors",msg)
-                        print("Your Score is %s letter pixels hit out of 611 letter pixels"%(score))
+                        print("Your Score is %s letter pixels hit out of WIP letter pixels"%(score))
                         break
 
                 break
