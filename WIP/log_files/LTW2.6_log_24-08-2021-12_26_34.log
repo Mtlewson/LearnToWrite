@@ -1,0 +1,103 @@
+2021-08-24 12:26:34,398 - INFO - root - 
+
+
+2021-08-24 12:26:34,398 - INFO - root - PROGRAM BEGINS
+2021-08-24 12:26:42,186 - INFO - root - Username = Bob
+2021-08-24 12:26:43,662 - INFO - root - Image: circle_image_Excel.xlsx
+2021-08-24 12:26:44,543 - DEBUG - asyncio - Using proactor: IocpProactor
+2021-08-24 12:26:44,788 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:26:45,132 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:26:45,132 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:26:45,168 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,168 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,480 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,480 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,615 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,615 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,721 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,722 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,852 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,853 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,960 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:45,961 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,103 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,104 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,204 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,204 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,446 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,447 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,558 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,559 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,787 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:26:46,912 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:46,913 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:47,140 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:26:47,141 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:26:47,380 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:47,381 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:47,732 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:47,732 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,090 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,090 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,317 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,318 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,561 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,561 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:48,681 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:26:48,682 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:26:48,786 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:26:49,033 - DEBUG - bleak.backends.dotnet.scanner - Received 6D:4E:1C:F3:16:AE: Unknown.
+2021-08-24 12:26:49,034 - DEBUG - bleak.backends.dotnet.scanner - Received 6D:4E:1C:F3:16:AE: Unknown.
+2021-08-24 12:26:49,152 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:49,153 - DEBUG - bleak.backends.dotnet.scanner - Received 55:AA:05:63:F1:D9: Unknown.
+2021-08-24 12:26:49,262 - DEBUG - bleak.backends.dotnet.scanner - Received 50:40:37:B8:D5:51: Unknown.
+2021-08-24 12:26:49,392 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-08-24 12:26:49,393 - DEBUG - bleak.backends.dotnet.scanner - 8 devices found. Watcher status: 3.
+2021-08-24 12:26:49,393 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-08-24 12:26:59,885 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:00,005 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-08-24 12:27:00,006 - DEBUG - bleak.backends.dotnet.scanner - 2 devices found. Watcher status: 3.
+2021-08-24 12:27:00,006 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-08-24 12:27:00,006 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-08-24 12:27:10,137 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:27:10,279 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:10,869 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:27:11,572 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:11,573 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:12,059 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:12,060 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:12,289 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:12,400 - DEBUG - bleak.backends.dotnet.scanner - Received 7E:0C:35:A6:B8:8F: Unknown.
+2021-08-24 12:27:12,512 - DEBUG - bleak.backends.dotnet.scanner - Received 2B:B8:DF:4B:4C:FC: Unknown.
+2021-08-24 12:27:12,748 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:12,874 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:12,874 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:12,885 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:27:13,226 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:13,227 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:13,833 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:14,057 - DEBUG - bleak.backends.dotnet.scanner - Received 7E:0C:35:A6:B8:8F: Unknown.
+2021-08-24 12:27:14,293 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:14,658 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Haptic Sleeve ML.
+2021-08-24 12:27:14,658 - DEBUG - bleak.backends.dotnet.scanner - Received 7C:9E:BD:EE:7A:82: Unknown.
+2021-08-24 12:27:14,659 - DEBUG - bleak.backends.dotnet.scanner - 7 devices found. Watcher status: 3.
+2021-08-24 12:27:14,659 - DEBUG - bleak.backends.dotnet.client - Connecting to BLE device @ 7c:9e:bd:ee:7a:82
+2021-08-24 12:27:21,741 - DEBUG - bleak.backends.dotnet.client - _ConnectionStatusChanged_Handler: 1
+2021-08-24 12:27:21,742 - DEBUG - bleak.backends.dotnet.client - Get Services...
+2021-08-24 12:27:21,798 - INFO - bleak.backends.dotnet.client - Services resolved for BleakClientDotNet (7c:9e:bd:ee:7a:82)
+2021-08-24 12:27:33,762 - DEBUG - bleak.backends.dotnet.client - Disconnecting from BLE device...
+2021-08-24 12:27:36,856 - DEBUG - bleak.backends.dotnet.client - _ConnectionStatusChanged_Handler: 0
+2021-08-24 12:27:36,894 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.
+2021-08-24 12:27:37,012 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:37,013 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:37,618 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:37,619 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:37,952 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:27:38,199 - DEBUG - bleak.backends.dotnet.scanner - Received 2B:B8:DF:4B:4C:FC: Unknown.
+2021-08-24 12:27:38,315 - DEBUG - bleak.backends.dotnet.scanner - Received 3F:4D:6C:C6:F2:5D: Unknown.
+2021-08-24 12:27:38,437 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:38,438 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:38,664 - DEBUG - bleak.backends.dotnet.scanner - Received CC:D2:81:7A:31:C7: Unknown.
+2021-08-24 12:27:39,249 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:39,250 - DEBUG - bleak.backends.dotnet.scanner - Received 55:31:A5:D3:C1:D6: Unknown.
+2021-08-24 12:27:39,379 - DEBUG - bleak.backends.dotnet.scanner - Received 38:68:A4:0D:FE:EB: Unknown.

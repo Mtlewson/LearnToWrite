@@ -8,8 +8,8 @@
 #Project: Motion Tracking
 #Year: 2021 Academic Year
 
-#2.5 implement score
-
+#2.6 final version
+import os #folder creation
 from os import listdir
 from os.path import isfile, join
 import numpy as np
@@ -81,7 +81,25 @@ total_black_pixels = 0
 # Configure logging parameters
 #log_date = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 log_date = time.strftime("%d-%m-%Y-%H_%M_%S", time.localtime())
-log_name = "LTW2.5_log_" + log_date + ".log"
+print(log_date)
+log_name = "LTW2.6_log_" + log_date + ".log"
+
+#creates log_files folder if it is not present
+if not os.path.exists("log_files"):
+    print("Folder for log_files created")
+    os.makedirs("log_files")
+
+#creates log_images folder if it is not present
+if not os.path.exists("log_images"):
+    print("Folder for log_images created")
+    os.makedirs("log_images")
+
+#creates letter_images folder if not present
+if not os.path.exists("letter_images"):
+    print("Folder for letter_images created")
+    os.makedirs("letter_images")
+
+# cv2.imwrite(segment_path+"img_cluster_"+str(i)+".jpeg",masked_image)
 logging.basicConfig(filename="log_files/"+log_name, filemode="a", format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
                     level=logging.DEBUG)
 
@@ -153,8 +171,6 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
     buffer = 0 #extra space for the decision windows
 
     dWinNumEnd = len(dWinList)-2
-    #dWinNumEnd = 5
-
 
     if dWinNum == dWinNumEnd: #if the game is over return end game true, no currect dWin 36 in logic, game will never end
         return dWinNum, 0, True, score, 1
@@ -269,10 +285,10 @@ def readDirectoriesForFiles():
             excelFilePath = 'letter_images/' + file_dict[user_input]
             df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
             letter = df.to_numpy()
-            return letter
+            return letter, str(file_dict[user_input])
         elif user_input.lower() == "quit":
             print("quitting")
-            return letter
+            return letter, ""
             break
         else:
             print("invalid input, please enter 0, 1, 2 etc, or quit ")
@@ -346,7 +362,7 @@ def init():
 
 
 
-async def main(address, loop, letter_input, total_black_pixels):
+async def main(address, loop, letter_input, total_black_pixels, name, file_name):
     startFlag = False
     oldStartFlag = False
     endFlag = False
@@ -354,6 +370,7 @@ async def main(address, loop, letter_input, total_black_pixels):
     score = 0
 
     letter = copy.deepcopy(letter_input)
+    log_letter = copy.deepcopy(letter_input)
     prevDwinNumber = 0
 
     refresh_counter = 0
@@ -416,6 +433,15 @@ async def main(address, loop, letter_input, total_black_pixels):
                                 letter = copy.deepcopy(letter_input)
 
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
+
+                                print("FIRST WINDOW CLEAR")
+                                #creates a coordinate list for the very first window so that you can get score for those pixels
+                                for x in range(dWinList[0].xmin, dWinList[0].xmax):
+                                    for y in range(dWinList[0].ymin, dWinList[0].ymax, -1):
+                                        if np.array_equal(letter[y, x],black):
+                                            if coord_list.count((x,y)) == 0:
+                                              coord_list.append((x,y))
+
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                             else: #Play the game
                                 winNum, pixDistance, endFlag, score, direction = getMinDistance(letter, winNum, centerX, centerY, score)
@@ -451,27 +477,19 @@ async def main(address, loop, letter_input, total_black_pixels):
 
 
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
-                                print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
-                                # print("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax))
-                                # print("Next Decision Window: xRange = %s, %s,  yRange = %s, %s"% (next_dwin.xmin, next_dwin.xmax, next_dwin.ymin, next_dwin.ymax))
+                                cv2.circle(log_letter, (centerX, centerY), 1, (0, 0, 255), -1)
+                                print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, (winNum+1)))
                                 print(("center_x = %s, center_y = %s, Radius = %s"% (centerX, centerY, radius)))
-                                # log_x = str(round(x, 2))
-                                # log_y = str(round(y, 2))
-                                # log_radius = log_x = str(round(radius, 2))
                                 logging.info("x = %s, y = %s, Radius = %s"% (centerX, centerY, radius))
                                 logging.info(("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax)))
                                 logging.info("Next Decision Window: xRange = %s, %s,  yRange = %s, %s"% (next_dwin.xmin, next_dwin.xmax, next_dwin.ymin, next_dwin.ymax))
-                                logging.info("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, winNum))
-                                # msg = ("{0},{1}".format(direction, pixDistance))
-                                # print(msg)
+                                logging.info("Score = %s, Distance = %s, direction = %s, Win# %s"% (score, pixDistance, direction, (winNum+1)))
 
-                                #user_command = b"1," + b"2,"
-                                # user_command = b"1,2"
-                                # intensity = b'2'
-                                #print(bytearray(b"3,1"))
                                 user_command = b"1,2"
-                                #intensity =  b'2'
 
+
+
+                                #distance of user from next decision window used to determine intensity
                                 if pixDistance < 50:
                                     intensity =  b'0'
                                 elif pixDistance < 100:
@@ -483,6 +501,7 @@ async def main(address, loop, letter_input, total_black_pixels):
                                 else:
                                     intensity =  b'0'
 
+                                #adds direction to user
                                 if direction == 1: #forward
                                     user_command = b"1," + intensity
                                 elif direction ==2: #left
@@ -497,12 +516,7 @@ async def main(address, loop, letter_input, total_black_pixels):
                                     print("Error in direction, please check direction")
                                     user_command = b"4," + intensity
 
-
-                                #command_list = [b"1,2", b"2,2", b"3,2", b"4,2"]
-                                # print(bytearray(user_command[0:20]))
                                 await client.write_gatt_char(UUID_NORDIC_TX, bytearray(user_command[0:20]), True)
-                                # print("transmitted")
-
 
 
                     cv2.imshow("Learn to Write!", letter)
@@ -512,8 +526,17 @@ async def main(address, loop, letter_input, total_black_pixels):
                     if key == ord("q") or endFlag == True:
                         #msg = ("{0},{1}".format(0, 0 ))
                         #client.publish("motors",msg)
-                        print("Your Score is", score, "out of", total_black_pixels, "letter pixels hit")
-                        # print("Your Score is %s letter pixels hit out of %s letter pixels"%(score),(total_black_pixels))
+                        file_user_name = name.replace(" ","").replace("/","")
+
+
+                        file_path = "log_images/"+file_user_name+"_"+log_date+".png"
+                        log_image = Image.fromarray(log_letter)
+                        log_image.save(file_path)
+                        print("Log image saved to ", file_path)
+                        logging.info("log image saved to %s"% (file_path))
+                        logging.info("Username = %s, Score = %s out of %s, on %s"% (name, score, total_black_pixels, file_name))
+                        print("Username = %s, Score = %s out of total black pixels = %s, with %s"% (name, score, total_black_pixels, file_name))
+
                         break
 
                 break
@@ -527,14 +550,15 @@ async def main(address, loop, letter_input, total_black_pixels):
 logging.info("\n\n")
 logging.info("PROGRAM BEGINS")
 
-
-letter = readDirectoriesForFiles()
+user_name_input = input("Please enter the user's name:\n")
+logging.info("Username = %s"% (user_name_input))
+letter, file_name_input = readDirectoriesForFiles()
 init()
 #gets letter from excel
 letter = extractImageFromExcel(letter)
 loop = asyncio.get_event_loop()
 #loops main until done
-loop.run_until_complete(main(address, loop, letter, total_black_pixels))
+loop.run_until_complete(main(address, loop, letter, total_black_pixels, user_name_input, file_name_input))
 camera.release()
 cv2.destroyAllWindows()
 
