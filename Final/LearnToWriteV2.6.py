@@ -165,7 +165,10 @@ def getdirection(inputX, inputY, x, y):
         if x > inputX: return 4
         else: return 2
 
-
+#A function that is used to traverse through the decision windows based on cursor location,
+#calculates distance to next decision window, and score.
+#returns information in the format of:
+#current dwin, distance to next dwin, a bool representing if it has reached the end, score, direction
 def getMinDistance (img, dWinNum, inputX, inputY, score):
     direction = 0
     buffer = 0 #extra space for the decision windows
@@ -188,6 +191,9 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
         distance = totalDistance(inputX, inputY, dwin_x_midpt, dwin_y_midpt)
 
         #checks if in range of NEXT decision window
+        #moves to next decision window
+        #used to create a list of coordinates of black pixels of the next window for score
+
         if (inputX in range(next_dwin.xmin-buffer, next_dwin.xmax+buffer) and inputY in range(next_dwin.ymax-buffer, next_dwin.ymin+buffer)):
             print("I am in the NEXT dwin:")
 
@@ -203,6 +209,7 @@ def getMinDistance (img, dWinNum, inputX, inputY, score):
             return dWinNum+1, 0, False, score, direction
 
         #checks if in range of CURRENT decision window
+        #checks if cursor is on any black pixels and increments score accordingly from the pixel list
         elif (inputX in range(current_dwin.xmin-buffer, current_dwin.xmax+buffer) and inputY in range(current_dwin.ymax-buffer, current_dwin.ymin+buffer)):
             print("I am in the current DWIN:")
             score_buffer = 2
@@ -295,6 +302,8 @@ def readDirectoriesForFiles():
 
 
 #function to grab the decision windows from excel
+#reads the excel document and finds the two coordinates of the dwin numbers and creates the windows
+
 def extractDecisionWindowsFromExcel():
     dwDict = {}
 
@@ -387,7 +396,7 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
                     cv2.imshow("Learn to Write!", letter)
                     key = cv2.waitKey(1) & 0xFF
 
-                    # grab the current frame
+                    # grab the current frame from the camera to read the pen information
                     (grabbed, frame) = camera.read()
                     frame = cv2.flip(frame, 1)
 
@@ -406,7 +415,7 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
 
                     # only proceed if at least one contour was found
                     if len(cnts) > 0:
-
+                        #refresh for frame so it doesn't become overcrowded with red blobs
                         refresh_counter +=1
                         if refresh_counter >= 100:
                             refresh_counter = 0
@@ -414,7 +423,7 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
                             letter = copy.deepcopy(letter_input)
                             prevDwinNumber = 0
 
-
+                        #used to determine pen location
                         # find the largest contour in the mask, then use centroid
                         c = max(cnts, key=cv2.contourArea)
                         ((x, y), radius) = cv2.minEnclosingCircle(c)
@@ -452,11 +461,12 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
 
                                 key = cv2.waitKey(1) & 0xFF
 
-
+                                #for loops to color in current decision window and next decision window
                                 current_Dwin = dWinList[winNum]
                                 next_dwin = current_Dwin
                                 if current_Dwin != len(dWinList):
                                   next_dwin = dWinList[winNum+1]
+                                #colors current dwin
                                 if prevDwinNumber != current_Dwin:
                                     prevDwinNumber = current_Dwin
                                     for x in range(current_Dwin.xmin, current_Dwin.xmax):
@@ -467,6 +477,7 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
 
                                             else:
                                                 letter[y, x] = (250, 80, 80)
+                                    #colors nextDwin
                                     for x in range(next_dwin.xmin, next_dwin.xmax):
                                         for y in range(next_dwin.ymin, next_dwin.ymax, -1):
                                             if np.array_equal(letter[y, x], black):
@@ -478,9 +489,12 @@ async def main(address, loop, letter_input, total_black_pixels, name, file_name)
 
                                 cv2.circle(letter, (centerX, centerY), 1, (0, 0, 255), -1)
                                 cv2.circle(log_letter, (centerX, centerY), 1, (0, 0, 255), -1)
+
+                                #print statements
                                 print ("Distance = %s, direction = %s, Win# %s"% (pixDistance, direction, (winNum+1)))
                                 print(("center_x = %s, center_y = %s, Radius = %s"% (centerX, centerY, radius)))
                                 logging.info("x = %s, y = %s, Radius = %s"% (centerX, centerY, radius))
+                                #log statements
                                 logging.info(("Decision Window: xRange = %s, %s,  yRange = %s, %s"% (current_Dwin.xmin, current_Dwin.xmax, current_Dwin.ymin, current_Dwin.ymax)))
                                 logging.info("Next Decision Window: xRange = %s, %s,  yRange = %s, %s"% (next_dwin.xmin, next_dwin.xmax, next_dwin.ymin, next_dwin.ymax))
                                 logging.info("Score = %s, Distance = %s, direction = %s, Win# %s"% (score, pixDistance, direction, (winNum+1)))
