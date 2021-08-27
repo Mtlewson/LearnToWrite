@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw
 import pandas as pd
 ############################################################ Global Variables ###############################################
 
-excelFilePath = 'letter_images/Letter_S_Excel.xlsx' #grabs the decision windows from excel file
+excelFilePath = 'letter_images/Letter_M_Excel.xlsx' #grabs the decision windows from excel file
 
 df = pd.read_excel(excelFilePath, index_col=0) #grabs excel file converts to data file
 letter = df.to_numpy() #converts to numpy

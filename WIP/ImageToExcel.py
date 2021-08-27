@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 
 #image name
-filename = 'circle_image.png'
+filename = 'Letter_M.png'
 letter = cv2.imread(filename, 1)
 
 maxSize = 256 #adjusts image size for the excel output.  CANNOT EXCEED 256!
@@ -119,6 +119,7 @@ def excelOutput(excelFilename, sheet, class_type = "PixelLocation"):
         worksheet.write(y, width-1, 0, cell_format)
 
     workbook.close()
+    print("Image converted to excel: ", fileOutput + '_Excel.xlsx')
 
 
 #letter = resizeImage(letter)
